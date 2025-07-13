@@ -1,0 +1,304 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { config } from '../config';
+---
+
+<Layout title={`Speaking - ${config.title}`} description="Keynote speaker and technology thought leader on AI, cloud computing, and digital transformation">
+	<section class="speaking-header">
+		<h1>Speaking & Media</h1>
+		<p class="subtitle">Sharing insights on AI, cloud computing, and digital transformation</p>
+	</section>
+
+	<section class="speaking-intro">
+		<p>With over 30 years of experience at the forefront of technology innovation, I bring unique perspectives on AI transformation, multi-agent systems, cloud computing, and cybersecurity. From testifying before Congress to advising at the White House, I've had the privilege of shaping technology policy and strategy at the highest levels.</p>
+	</section>
+
+	<section class="featured-appearances">
+		<h2>Notable Appearances</h2>
+		<div class="appearances-grid">
+			<article class="appearance-card highlight">
+				<h3>White House Technology Advisory</h3>
+				<p class="appearance-context">Healthcare.gov Rescue Mission • 2013</p>
+				<p>Called to the White House Situation Room to provide technical guidance during the Healthcare.gov crisis. Worked directly with federal CTO Todd Park and CIO Steven VanRoekel to stabilize one of the most critical government technology initiatives.</p>
+			</article>
+
+			<article class="appearance-card highlight">
+				<h3>Congressional Testimony</h3>
+				<p class="appearance-context">House Committee on Oversight and Government Reform • September 2015</p>
+				<p>Testified before Congress on the strategic value of cloud computing for government modernization, helping shape federal cloud adoption policies.</p>
+			</article>
+
+			<article class="appearance-card">
+				<h3>InsideDT Podcast</h3>
+				<p class="appearance-context">The Impact of AI • August 2023</p>
+				<p>Deep dive into how AI is transforming enterprise IT and the role of multi-agent systems in the future of technology.</p>
+			</article>
+
+			<article class="appearance-card">
+				<h3>alphalist Podcast</h3>
+				<p class="appearance-context">AI in DevOps & Field CTO Insights • April 2023</p>
+				<p>Explored the intersection of AI and DevOps, incident response automation, and the evolving role of technology leadership.</p>
+			</article>
+		</div>
+	</section>
+
+	<section class="speaking-topics">
+		<h2>Speaking Topics</h2>
+		<div class="topics-grid">
+			<div class="topic-card">
+				<h3>Multi-Agent AI Systems</h3>
+				<p>The future of AI lies in collaborative agent systems. I explore how swarms of specialized AI agents can solve complex problems beyond the capabilities of monolithic models.</p>
+			</div>
+			<div class="topic-card">
+				<h3>Cloud & Edge Computing</h3>
+				<p>From co-founding OpenStack to securing the edge at Cloudflare, I share insights on the evolution of distributed computing and what's next.</p>
+			</div>
+			<div class="topic-card">
+				<h3>Cybersecurity in the AI Era</h3>
+				<p>How AI is transforming both attack and defense strategies, and what organizations need to know to stay secure.</p>
+			</div>
+			<div class="topic-card">
+				<h3>Digital Transformation</h3>
+				<p>Practical insights from guiding Fortune 500 companies through technology transformations, from legacy modernization to AI adoption.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="media-mentions">
+		<h2>Media & Press</h2>
+		<p>Regular contributor to technology discussions in major media outlets, industry publications, and technology podcasts. Topics range from cloud computing trends to AI ethics and the future of work.</p>
+	</section>
+
+	<section class="booking-cta">
+		<h2>Book John for Your Event</h2>
+		<p>I'm available for keynotes, panel discussions, fireside chats, and workshop sessions. Whether it's a technical deep-dive or executive strategy session, I tailor each presentation to your audience's needs.</p>
+		<div class="booking-buttons">
+			<a href="mailto:jengates@gmail.com?subject=Speaking%20Inquiry" class="booking-btn primary">
+				Inquire About Speaking
+			</a>
+			<a href="/about#contact" class="booking-btn secondary">
+				Learn More About John
+			</a>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.speaking-header {
+		text-align: center;
+		padding: calc(var(--grid-unit) * 6) 0;
+		border-bottom: 4px solid var(--color-accent);
+		margin-bottom: calc(var(--grid-unit) * 6);
+	}
+
+	.subtitle {
+		font-size: 1.25rem;
+		color: var(--color-text-secondary);
+		font-weight: 500;
+		letter-spacing: 0.05em;
+		margin: 0;
+	}
+
+	.speaking-intro {
+		max-width: 800px;
+		margin: 0 auto calc(var(--grid-unit) * 6) auto;
+		text-align: center;
+	}
+
+	.speaking-intro p {
+		font-size: 1.125rem;
+		line-height: 1.8;
+	}
+
+	.featured-appearances {
+		margin-bottom: calc(var(--grid-unit) * 8);
+	}
+
+	.appearances-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: calc(var(--grid-unit) * 4);
+		margin-top: calc(var(--grid-unit) * 4);
+	}
+
+	.appearance-card {
+		background-color: var(--color-surface);
+		padding: calc(var(--grid-unit) * 4);
+		border-radius: calc(var(--grid-unit));
+		border: 2px solid var(--color-border);
+		transition: all 0.3s ease;
+	}
+
+	.appearance-card.highlight {
+		border-color: var(--color-accent);
+		position: relative;
+	}
+
+	.appearance-card.highlight::before {
+		content: "FEATURED";
+		position: absolute;
+		top: calc(var(--grid-unit) * 2);
+		right: calc(var(--grid-unit) * 2);
+		background-color: var(--color-accent);
+		color: white;
+		padding: calc(var(--grid-unit) / 2) calc(var(--grid-unit));
+		font-family: var(--font-heading-secondary);
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		border-radius: 4px;
+	}
+
+	.appearance-card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+	}
+
+	.appearance-card h3 {
+		font-size: 1.5rem;
+		margin-bottom: calc(var(--grid-unit));
+	}
+
+	.appearance-context {
+		font-family: var(--font-mono);
+		font-size: 0.875rem;
+		color: var(--color-text-muted);
+		margin-bottom: calc(var(--grid-unit) * 2);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.appearance-card p:last-child {
+		margin: 0;
+		line-height: 1.6;
+	}
+
+	.speaking-topics {
+		background-color: var(--color-surface);
+		padding: calc(var(--grid-unit) * 6);
+		border-radius: calc(var(--grid-unit));
+		margin-bottom: calc(var(--grid-unit) * 8);
+	}
+
+	.topics-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: calc(var(--grid-unit) * 4);
+		margin-top: calc(var(--grid-unit) * 4);
+	}
+
+	.topic-card {
+		background-color: var(--color-background);
+		padding: calc(var(--grid-unit) * 3);
+		border-radius: calc(var(--grid-unit));
+		border: 1px solid var(--color-border);
+	}
+
+	.topic-card h3 {
+		font-size: 1.25rem;
+		margin-bottom: calc(var(--grid-unit) * 2);
+		color: var(--color-accent);
+	}
+
+	.topic-card p {
+		font-size: 1rem;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	.media-mentions {
+		text-align: center;
+		margin-bottom: calc(var(--grid-unit) * 8);
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.media-mentions p {
+		font-size: 1.125rem;
+		line-height: 1.8;
+	}
+
+	.booking-cta {
+		text-align: center;
+		background-color: var(--color-surface);
+		padding: calc(var(--grid-unit) * 6);
+		border-radius: calc(var(--grid-unit));
+		margin-bottom: calc(var(--grid-unit) * 8);
+	}
+
+	.booking-cta h2 {
+		margin-bottom: calc(var(--grid-unit) * 3);
+	}
+
+	.booking-cta p {
+		font-size: 1.125rem;
+		line-height: 1.6;
+		max-width: 600px;
+		margin: 0 auto calc(var(--grid-unit) * 4) auto;
+	}
+
+	.booking-buttons {
+		display: flex;
+		gap: calc(var(--grid-unit) * 3);
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.booking-btn {
+		font-family: var(--font-heading-secondary);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		padding: calc(var(--grid-unit) * 2) calc(var(--grid-unit) * 4);
+		border-radius: 4px;
+		transition: all 0.2s ease;
+		display: inline-block;
+		text-decoration: none;
+	}
+
+	.booking-btn.primary {
+		background-color: var(--color-accent);
+		color: white;
+		border: 2px solid var(--color-accent);
+	}
+
+	.booking-btn.primary:hover {
+		background-color: var(--color-text-primary);
+		border-color: var(--color-text-primary);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.booking-btn.secondary {
+		background-color: transparent;
+		color: var(--color-text-primary);
+		border: 2px solid var(--color-border);
+	}
+
+	.booking-btn.secondary:hover {
+		border-color: var(--color-accent);
+		color: var(--color-accent);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+	}
+
+	@media (max-width: 768px) {
+		.speaking-header {
+			padding: calc(var(--grid-unit) * 4) 0;
+		}
+
+		.appearances-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.speaking-topics,
+		.booking-cta {
+			padding: calc(var(--grid-unit) * 4) calc(var(--grid-unit) * 2);
+		}
+
+		.topics-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

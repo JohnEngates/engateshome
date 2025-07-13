@@ -1,34 +1,83 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { config } from '../config';
+import { Image } from 'astro:assets';
+import profileImage from '../assets/images/site/engates1x1.png';
 ---
 
 <Layout title={config.title}>
 	<section class="hero">
-		<h1>{config.title}</h1>
-		<p class="tagline">{config.description}</p>
+		<div class="hero-content">
+			<Image 
+				src={profileImage} 
+				alt={config.author.name} 
+				class="hero-avatar"
+				width={150}
+				height={150}
+				format="webp"
+				quality={85}
+			/>
+			<h1>{config.title}</h1>
+			<p class="tagline">{config.description}</p>
+		</div>
 	</section>
 
 	<section class="intro">
-		<h2>Welcome</h2>
+		<h2>Exploring AI's Next Frontier</h2>
 		<p>{config.author.bio}</p>
-		<p>This site is built with Astro and deployed on Cloudflare Workers, featuring the bold typography and minimal design of the Volks Typo theme.</p>
 	</section>
 
-	<section class="features">
-		<h2>Features</h2>
-		<ul>
-			<li>Lightning-fast performance with edge deployment</li>
-			<li>Bold, uppercase typography for impact</li>
-			<li>Minimal, monotone design with red accents</li>
-			<li>Dark mode support (coming soon)</li>
-			<li>Blog with MDX support</li>
-		</ul>
+	<section class="research-areas">
+		<h2>Research Focus</h2>
+		<div class="research-grid">
+			<div class="research-item">
+				<h3>Agentic AI</h3>
+				<p>Building autonomous AI agents that can reason, plan, and act independently while maintaining alignment with human goals.</p>
+			</div>
+			<div class="research-item">
+				<h3>Multi-Agent Systems</h3>
+				<p>Exploring how swarms of AI agents collaborate, communicate, and coordinate to solve complex problems beyond individual capabilities.</p>
+			</div>
+			<div class="research-item">
+				<h3>Real-World Applications</h3>
+				<p>Understanding emergent behaviors and collective intelligence to solve challenges in cybersecurity, distributed computing, and autonomous systems.</p>
+			</div>
+			<div class="research-item">
+				<h3>Cybersecurity & AI Defense</h3>
+				<p>Leveraging AI agents for proactive threat detection, automated incident response, and adaptive security systems that evolve to counter emerging cyber threats.</p>
+			</div>
+			<div class="research-item">
+				<h3>Quantum-Safe AI Systems</h3>
+				<p>Preparing AI infrastructure for the post-quantum era by exploring quantum-resistant algorithms and the intersection of quantum computing with distributed AI systems.</p>
+			</div>
+		</div>
 	</section>
 
-	<section class="cta">
-		<h2>Get Started</h2>
-		<p>Check out the <a href="/blog">blog</a> to see the latest posts, or explore the site to learn more about me and my work.</p>
+	<section class="experience">
+		<h2>Building Tomorrow's Infrastructure</h2>
+		<p>With three decades of experience building and securing the systems that power the Internet—from pioneering cloud computing at Rackspace to protecting the digital edge at Cloudflare—I bring a unique perspective to AI research. My cybersecurity expertise informs my approach to building resilient AI systems, while my exploration of quantum computing prepares these systems for tomorrow's computational paradigms. The same principles that made cloud computing ubiquitous now guide my work at the intersection of AI, security, and quantum-ready infrastructure.</p>
+		<div class="cta-buttons">
+			<a href="/about" class="cta-btn primary">Learn More About Me</a>
+			<a href="/blog" class="cta-btn secondary">Read My Latest Thoughts</a>
+		</div>
+	</section>
+
+	<section class="connect">
+		<h2>CONNECT WITH ME</h2>
+		<div class="social-links">
+			<a href={config.social.linkedin} class="social-link" target="_blank" rel="noopener noreferrer">
+				LINKEDIN
+			</a>
+			<a href={config.social.twitter} class="social-link" target="_blank" rel="noopener noreferrer">
+				X (TWITTER)
+			</a>
+			<a href={config.social.github} class="social-link" target="_blank" rel="noopener noreferrer">
+				GITHUB
+			</a>
+			<a href={`mailto:${config.social.email}`} class="social-link">
+				EMAIL
+			</a>
+		</div>
 	</section>
 </Layout>
 
@@ -40,8 +89,24 @@ import { config } from '../config';
 		margin-bottom: calc(var(--grid-unit) * 6);
 	}
 
+	.hero-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: calc(var(--grid-unit) * 3);
+	}
+
+	.hero-avatar {
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		border: 4px solid var(--color-border);
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+		object-fit: cover;
+	}
+
 	.hero h1 {
-		font-size: 3.5rem;
+		font-size: 2.5rem;
 		margin-bottom: calc(var(--grid-unit) * 2);
 	}
 
@@ -50,36 +115,183 @@ import { config } from '../config';
 		color: var(--color-text-secondary);
 		font-weight: 500;
 		letter-spacing: 0.05em;
+		max-width: 600px;
+		line-height: 1.6;
 	}
 
 	section {
-		margin-bottom: calc(var(--grid-unit) * 6);
+		margin-bottom: calc(var(--grid-unit) * 8);
 	}
 
-	.features ul {
-		list-style: none;
-		padding: 0;
+	.intro p {
+		font-size: 1.125rem;
+		line-height: 1.8;
+		max-width: 900px;
+		margin: 0 auto;
 	}
 
-	.features li {
-		padding-left: calc(var(--grid-unit) * 3);
-		position: relative;
+	.research-areas {
+		background-color: var(--color-surface);
+		padding: calc(var(--grid-unit) * 6);
+		border-radius: calc(var(--grid-unit));
+	}
+
+	.research-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: calc(var(--grid-unit) * 4);
+		margin-top: calc(var(--grid-unit) * 4);
+	}
+
+	.research-item {
+		padding: calc(var(--grid-unit) * 3);
+		background-color: var(--color-background);
+		border: 2px solid var(--color-border);
+		border-radius: calc(var(--grid-unit));
+		transition: all 0.3s ease;
+	}
+
+	.research-item:hover {
+		border-color: var(--color-accent);
+		transform: translateY(-4px);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+	}
+
+	.research-item h3 {
+		font-size: 1.25rem;
 		margin-bottom: calc(var(--grid-unit) * 2);
 	}
 
-	.features li::before {
-		content: '▪';
-		position: absolute;
-		left: 0;
-		color: var(--color-accent);
-		font-size: 1.5rem;
-		line-height: 1;
+	.research-item p {
+		font-size: 1rem;
+		line-height: 1.6;
+		color: var(--color-text-secondary);
 	}
 
-	.cta {
+	.experience {
 		text-align: center;
-		padding: calc(var(--grid-unit) * 4);
-		background-color: var(--color-surface);
+	}
+
+	.experience p {
+		font-size: 1.125rem;
+		line-height: 1.8;
+		max-width: 800px;
+		margin: 0 auto calc(var(--grid-unit) * 4) auto;
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: calc(var(--grid-unit) * 3);
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: calc(var(--grid-unit) * 4);
+	}
+
+	.cta-btn {
+		font-family: var(--font-heading-secondary);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		padding: calc(var(--grid-unit) * 2) calc(var(--grid-unit) * 4);
+		border-radius: 4px;
+		transition: all 0.2s ease;
+		display: inline-block;
+	}
+
+	.cta-btn.primary {
+		background-color: var(--color-accent);
+		color: white;
+		border: 2px solid var(--color-accent);
+	}
+
+	.cta-btn.primary:hover {
+		background-color: var(--color-text-primary);
+		border-color: var(--color-text-primary);
+		text-decoration: none;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.cta-btn.secondary {
+		background-color: transparent;
+		color: var(--color-text-primary);
 		border: 2px solid var(--color-border);
+	}
+
+	.cta-btn.secondary:hover {
+		border-color: var(--color-accent);
+		color: var(--color-accent);
+		text-decoration: none;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+	}
+
+	.connect {
+		text-align: center;
+		padding: calc(var(--grid-unit) * 8) 0;
+		border-top: 4px solid var(--color-accent);
+		margin-top: calc(var(--grid-unit) * 8);
+	}
+
+	.connect h2 {
+		font-size: 2.5rem;
+		margin-bottom: calc(var(--grid-unit) * 6);
+		letter-spacing: 0.05em;
+	}
+
+	.social-links {
+		display: flex;
+		gap: calc(var(--grid-unit) * 3);
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.social-link {
+		font-family: var(--font-heading-secondary);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		padding: calc(var(--grid-unit) * 2) calc(var(--grid-unit) * 4);
+		border: 3px solid var(--color-text-primary);
+		background-color: transparent;
+		color: var(--color-text-primary);
+		transition: all 0.2s ease;
+		display: inline-block;
+		min-width: 150px;
+		text-align: center;
+	}
+
+	.social-link:hover {
+		border-color: var(--color-accent);
+		color: var(--color-accent);
+		text-decoration: none;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	@media (max-width: 768px) {
+		.hero h1 {
+			font-size: 2.5rem;
+		}
+
+		.hero-avatar {
+			width: 120px;
+			height: 120px;
+		}
+
+		.research-areas {
+			padding: calc(var(--grid-unit) * 4) calc(var(--grid-unit) * 2);
+		}
+
+		.research-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.social-links {
+			grid-template-columns: 1fr 1fr;
+			display: grid;
+			gap: calc(var(--grid-unit) * 2);
+			padding: 0 calc(var(--grid-unit) * 2);
+		}
 	}
 </style>
