@@ -1,0 +1,310 @@
+---
+import { config } from '../config';
+import ThemeToggle from './ThemeToggle.astro';
+---
+
+<header class="site-header">
+  <div class="header-content">
+    <!-- Mobile hamburger button -->
+    <button class="hamburger-toggle mobile-only" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="hamburger-line" d="M3 6h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path class="hamburger-line" d="M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path class="hamburger-line" d="M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    
+    <div class="site-title">
+      <a href="/">
+        <span class="title-text">{config.title}</span>
+      </a>
+    </div>
+    
+    <div class="header-controls">
+      <nav class="main-navigation" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/blog" class="nav-link">Blog</a></li>
+          <li><a href="/categories" class="nav-link">Categories</a></li>
+          <li><a href="/about" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+      
+      <!-- Mobile controls group -->
+      <div class="mobile-controls">
+        <ThemeToggle />
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+  <ul class="mobile-nav-list">
+    <li><a href="/" class="mobile-nav-link">Home</a></li>
+    <li><a href="/blog" class="mobile-nav-link">Blog</a></li>
+    <li><a href="/categories" class="mobile-nav-link">Categories</a></li>
+    <li><a href="/about" class="mobile-nav-link">About</a></li>
+  </ul>
+</nav>
+
+<script>
+  // Hamburger menu functionality
+  function initHamburgerMenu() {
+    const hamburgerToggle = document.getElementById('hamburger-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const body = document.body;
+
+    if (!hamburgerToggle || !mobileMenu) return;
+
+    hamburgerToggle.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.contains('active');
+      
+      if (isOpen) {
+        mobileMenu.classList.remove('active');
+        hamburgerToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      } else {
+        mobileMenu.classList.add('active');
+        hamburgerToggle.setAttribute('aria-expanded', 'true');
+        body.style.overflow = 'hidden';
+      }
+    });
+
+    // Close menu when clicking on a link
+    const mobileNavLinks = mobileMenu.querySelectorAll('.mobile-nav-link');
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        hamburgerToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      });
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+        hamburgerToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      }
+    });
+  }
+
+  // Initialize when DOM is loaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHamburgerMenu);
+  } else {
+    initHamburgerMenu();
+  }
+</script>
+
+<style>
+  .site-header {
+    background-color: var(--color-surface);
+    border-bottom: 2px solid var(--color-border);
+    padding: calc(var(--grid-unit) * 3) 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: calc(var(--grid-unit) * 2);
+  }
+
+  .site-title a {
+    display: block;
+    text-decoration: none;
+  }
+
+  .title-text {
+    font-family: var(--font-heading-primary);
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-accent);
+  }
+
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--grid-unit) * 3);
+    flex-shrink: 0;
+  }
+
+  .main-navigation {
+    flex-shrink: 0;
+  }
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: calc(var(--grid-unit) * 3);
+  }
+
+  .nav-link {
+    font-family: var(--font-heading-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-primary);
+    padding: calc(var(--grid-unit) / 2) calc(var(--grid-unit));
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  /* Desktop controls - visible by default */
+  .mobile-controls {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--grid-unit) * 2);
+  }
+
+  /* Hide mobile-only hamburger by default */
+  .mobile-only {
+    display: none !important;
+  }
+
+  .hamburger-toggle {
+    background: none;
+    border: none;
+    color: var(--color-text-primary);
+    padding: calc(var(--grid-unit));
+    cursor: pointer;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hamburger-toggle:hover,
+  .hamburger-toggle:focus {
+    color: var(--color-accent);
+    outline: none;
+  }
+
+  /* Mobile menu - hidden by default */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-background);
+    z-index: 99;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    padding-top: calc(var(--grid-unit) * 12);
+  }
+
+  .mobile-menu.active {
+    transform: translateX(0);
+  }
+
+  .mobile-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: calc(var(--grid-unit) * 4) 0;
+  }
+
+  .mobile-nav-link {
+    display: block;
+    padding: calc(var(--grid-unit) * 3) calc(var(--grid-unit) * 4);
+    font-family: var(--font-heading-secondary);
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border);
+    transition: all 0.2s ease;
+  }
+
+  .mobile-nav-link:hover,
+  .mobile-nav-link:focus {
+    color: var(--color-accent);
+    background-color: var(--color-surface);
+  }
+
+  @media (max-width: 768px) {
+    .site-header {
+      padding: calc(var(--grid-unit) * 2) 0;
+    }
+
+    .header-content {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: calc(var(--grid-unit) * 2);
+      padding: 0 calc(var(--grid-unit) * 2);
+    }
+
+    /* Show mobile hamburger on far left */
+    .mobile-only {
+      display: flex !important;
+      justify-self: start;
+    }
+
+    .site-title {
+      justify-self: center;
+      text-align: center;
+      grid-column: 2;
+    }
+
+    .title-text {
+      font-size: 1.5rem;
+    }
+    
+    .header-controls {
+      justify-self: end;
+      gap: 0;
+      grid-column: 3;
+    }
+    
+    /* Hide desktop navigation on mobile */
+    .main-navigation {
+      display: none;
+    }
+    
+    /* Show mobile controls on right */
+    .mobile-controls {
+      display: flex !important;
+      gap: calc(var(--grid-unit) * 1.5);
+    }
+    
+    .hamburger-toggle {
+      padding: calc(var(--grid-unit) * 0.75);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Even smaller mobile adjustments */
+    .mobile-controls {
+      gap: calc(var(--grid-unit)) !important;
+    }
+    
+    .title-text {
+      font-size: 1.25rem;
+      letter-spacing: 0.1em;
+    }
+  }
+</style>

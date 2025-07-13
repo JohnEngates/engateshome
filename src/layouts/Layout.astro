@@ -1,22 +1,61 @@
+---
+import '@fontsource/oswald/300.css';
+import '@fontsource/oswald/400.css';
+import '@fontsource/oswald/500.css';
+import '@fontsource/oswald/600.css';
+import '@fontsource/oswald/700.css';
+import '@fontsource/roboto-condensed/300.css';
+import '@fontsource/roboto-condensed/400.css';
+import '@fontsource/roboto-condensed/700.css';
+import '@fontsource/work-sans/400.css';
+import '@fontsource/work-sans/500.css';
+import '@fontsource/work-sans/600.css';
+import '@fontsource/jetbrains-mono/400.css';
+import '@fontsource/jetbrains-mono/700.css';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Personal blog and portfolio of John Engates' } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<script is:inline src="/theme-init.js"></script>
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="description" content={description} />
+		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<div class="site-wrapper">
+			<Header />
+			<main class="main-content">
+				<slot />
+			</main>
+		</div>
 	</body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
+	.site-wrapper {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+	}
+
+	.main-content {
+		flex: 1;
 		width: 100%;
-		height: 100%;
+		max-width: var(--max-width);
+		margin: 0 auto;
+		padding: var(--content-padding);
 	}
 </style>

@@ -1,0 +1,143 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { config } from '../../config';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: post,
+	}));
+}
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout title={`${post.data.title} - ${config.title}`} description={post.data.description || post.data.excerpt}>
+	<article class="blog-post">
+		<header class="post-header">
+			<h1 class="post-title">{post.data.title}</h1>
+			<div class="post-meta">
+				<time class="post-date">{post.data.date.toLocaleDateString('en-US', { 
+					year: 'numeric', 
+					month: 'long', 
+					day: 'numeric' 
+				})}</time>
+				{post.data.author && (
+					<span class="post-author">by {post.data.author}</span>
+				)}
+			</div>
+			{post.data.categories.length > 0 && (
+				<div class="categories">
+					{post.data.categories.map((category) => (
+						<span class="category">{category}</span>
+					))}
+				</div>
+			)}
+		</header>
+
+		<div class="post-content">
+			<Content />
+		</div>
+
+		<footer class="post-footer">
+			<div class="nav-links">
+				<a href="/blog" class="back-link">← Back to Blog</a>
+			</div>
+		</footer>
+	</article>
+</Layout>
+
+<style>
+	.blog-post {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.post-header {
+		text-align: center;
+		margin-bottom: calc(var(--grid-unit) * 6);
+		padding-bottom: calc(var(--grid-unit) * 4);
+		border-bottom: 4px solid var(--color-accent);
+	}
+
+	.post-title {
+		font-size: 3rem;
+		margin-bottom: calc(var(--grid-unit) * 2);
+	}
+
+	.post-meta {
+		display: flex;
+		justify-content: center;
+		gap: calc(var(--grid-unit) * 2);
+		flex-wrap: wrap;
+		margin-bottom: calc(var(--grid-unit) * 2);
+	}
+
+	.post-date,
+	.post-author {
+		font-family: var(--font-heading-secondary);
+		font-size: 0.875rem;
+		color: var(--color-text-muted);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+
+	.categories {
+		display: flex;
+		justify-content: center;
+		gap: calc(var(--grid-unit));
+		flex-wrap: wrap;
+	}
+
+	.category {
+		font-size: 0.875rem;
+		font-family: var(--font-heading-secondary);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		padding: calc(var(--grid-unit) / 2) calc(var(--grid-unit));
+		border: 2px solid var(--color-border);
+		color: var(--color-text-secondary);
+	}
+
+	.post-content {
+		font-size: 1.125rem;
+		line-height: 1.8;
+		margin-bottom: calc(var(--grid-unit) * 6);
+	}
+
+	.post-content :global(h2) {
+		margin-top: calc(var(--grid-unit) * 6);
+		margin-bottom: calc(var(--grid-unit) * 3);
+	}
+
+	.post-content :global(h3) {
+		margin-top: calc(var(--grid-unit) * 4);
+		margin-bottom: calc(var(--grid-unit) * 2);
+	}
+
+	.post-content :global(img) {
+		display: block;
+		margin: calc(var(--grid-unit) * 4) auto;
+	}
+
+	.post-footer {
+		padding-top: calc(var(--grid-unit) * 4);
+		border-top: 2px solid var(--color-border);
+	}
+
+	.nav-links {
+		display: flex;
+		justify-content: center;
+	}
+
+	.back-link {
+		font-family: var(--font-heading-secondary);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font-size: 0.875rem;
+	}
+</style>

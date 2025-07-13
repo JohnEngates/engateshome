@@ -12,6 +12,12 @@
 	},
 	"dependencies": {
 		"@astrojs/cloudflare": "^12.6.0",
+		"@astrojs/mdx": "^4.3.0",
+		"@astrojs/rss": "^4.0.12",
+		"@fontsource/jetbrains-mono": "^5.2.6",
+		"@fontsource/oswald": "^5.2.6",
+		"@fontsource/roboto-condensed": "^5.2.6",
+		"@fontsource/work-sans": "^5.2.6",
 		"astro": "^5.11.0"
 	},
 	"devDependencies": {
