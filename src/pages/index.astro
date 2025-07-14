@@ -47,10 +47,20 @@ import profileImage from '../assets/images/site/engates1x1.png';
 				<p>Leveraging AI agents for proactive threat detection, automated incident response, and adaptive security systems that evolve to counter emerging cyber threats.</p>
 			</div>
 			<div class="research-item">
+				<h3>Machine Identity & Zero Trust</h3>
+				<p>Securing the 45:1 ratio of machines to humans in modern enterprises. From service accounts to AI agents, every non-human actor needs identity verification, policy enforcement, and lifecycle management to prevent the next major breach.</p>
+			</div>
+			<div class="research-item">
 				<h3>Quantum-Safe AI Systems</h3>
 				<p>Preparing AI infrastructure for the post-quantum era by exploring quantum-resistant algorithms and the intersection of quantum computing with distributed AI systems.</p>
 			</div>
 		</div>
+	</section>
+
+	<section class="security-quote">
+		<blockquote>
+			<p>"I've always believed that security isn't an add-on - it's the foundation for scalable AI. As AI agents take on more mission-critical workflows across the enterprise...we must all raise standards for security and data protection, while continuing to advance the frontier of enterprise-grade AI."</p>
+		</blockquote>
 	</section>
 
 	<section class="experience">
@@ -66,19 +76,29 @@ import profileImage from '../assets/images/site/engates1x1.png';
 		<h2>CONNECT WITH ME</h2>
 		<div class="social-links">
 			<a href={config.social.linkedin} class="social-link" target="_blank" rel="noopener noreferrer">
-				LINKEDIN
+				<i class="fab fa-linkedin"></i> LINKEDIN
 			</a>
 			<a href={config.social.twitter} class="social-link" target="_blank" rel="noopener noreferrer">
-				X (TWITTER)
+				<i class="fab fa-x-twitter"></i> X
 			</a>
 			<a href={config.social.github} class="social-link" target="_blank" rel="noopener noreferrer">
-				GITHUB
+				<i class="fab fa-github"></i> GITHUB
 			</a>
 			<a href={`mailto:${config.social.email}`} class="social-link">
-				EMAIL
+				<i class="fas fa-envelope"></i> EMAIL
 			</a>
 		</div>
 	</section>
+
+	<footer class="built-with">
+		<p>
+			<a href="https://www.anthropic.com/claude-code" target="_blank" rel="noopener noreferrer"><i class="fas fa-robot"></i> Claude Code</a>
+			<span class="separator">|</span>
+			<a href="https://astro.build/" target="_blank" rel="noopener noreferrer"><i class="fas fa-rocket"></i> Astro</a>
+			<span class="separator">|</span>
+			<a href="https://workers.cloudflare.com/" target="_blank" rel="noopener noreferrer"><i class="fas fa-cloud"></i> Cloudflare Workers</a>
+		</p>
+	</footer>
 </Layout>
 
 <style>
@@ -226,9 +246,44 @@ import profileImage from '../assets/images/site/engates1x1.png';
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 	}
 
+	.security-quote {
+		margin: calc(var(--grid-unit) * 10) auto;
+		max-width: 900px;
+		padding: 0 calc(var(--grid-unit) * 4);
+	}
+
+	.security-quote blockquote {
+		margin: 0;
+		padding: calc(var(--grid-unit) * 5);
+		background-color: var(--color-surface);
+		border-left: 6px solid var(--color-accent);
+		position: relative;
+	}
+
+	.security-quote blockquote::before {
+		content: '"';
+		position: absolute;
+		top: -20px;
+		left: 20px;
+		font-size: 5rem;
+		color: var(--color-accent);
+		font-family: var(--font-heading);
+		line-height: 1;
+		opacity: 0.3;
+	}
+
+	.security-quote p {
+		margin: 0;
+		font-size: 1.25rem;
+		line-height: 1.8;
+		font-style: italic;
+		color: var(--color-text-primary);
+		font-weight: 500;
+	}
+
 	.connect {
 		text-align: center;
-		padding: calc(var(--grid-unit) * 8) 0;
+		padding: calc(var(--grid-unit) * 8) 0 calc(var(--grid-unit) * 4) 0;
 		border-top: 4px solid var(--color-accent);
 		margin-top: calc(var(--grid-unit) * 8);
 	}
@@ -251,14 +306,19 @@ import profileImage from '../assets/images/site/engates1x1.png';
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
-		padding: calc(var(--grid-unit) * 2) calc(var(--grid-unit) * 4);
-		border: 3px solid var(--color-text-primary);
+		padding: calc(var(--grid-unit) * 1.5) calc(var(--grid-unit) * 3);
+		border: 2px solid var(--color-text-primary);
 		background-color: transparent;
 		color: var(--color-text-primary);
 		transition: all 0.2s ease;
-		display: inline-block;
-		min-width: 150px;
-		text-align: center;
+		display: inline-flex;
+		align-items: center;
+		gap: calc(var(--grid-unit));
+		font-size: 0.875rem;
+	}
+
+	.social-link i {
+		font-size: 1rem;
 	}
 
 	.social-link:hover {
@@ -267,6 +327,43 @@ import profileImage from '../assets/images/site/engates1x1.png';
 		text-decoration: none;
 		transform: translateY(-2px);
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.built-with {
+		text-align: center;
+		padding: calc(var(--grid-unit) * 2) 0 calc(var(--grid-unit) * 3) 0;
+		background-color: var(--color-surface);
+		margin-top: -1px; /* Remove gap from border */
+		font-size: 0.7rem;
+	}
+
+	.built-with p {
+		margin: 0;
+		color: var(--color-text-secondary);
+	}
+
+	.built-with a {
+		color: var(--color-text-secondary);
+		text-decoration: none;
+		transition: color 0.2s ease;
+		font-weight: 500;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+	}
+
+	.built-with i {
+		font-size: 0.85rem;
+	}
+
+	.built-with a:hover {
+		color: var(--color-accent);
+	}
+
+	.built-with .separator {
+		margin: 0 calc(var(--grid-unit));
+		color: var(--color-border);
+		opacity: 0.5;
 	}
 
 	@media (max-width: 768px) {
@@ -285,6 +382,18 @@ import profileImage from '../assets/images/site/engates1x1.png';
 
 		.research-grid {
 			grid-template-columns: 1fr;
+		}
+
+		.security-quote {
+			padding: 0 calc(var(--grid-unit) * 2);
+		}
+
+		.security-quote blockquote {
+			padding: calc(var(--grid-unit) * 3);
+		}
+
+		.security-quote p {
+			font-size: 1.125rem;
 		}
 
 		.social-links {

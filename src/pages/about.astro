@@ -26,6 +26,9 @@ import headshotImage from '../assets/images/site/engates_john.jpg';
 				<a href={headshotImage.src} download class="download-btn">
 					Download Headshot
 				</a>
+				<a href="/John_Engates_Speaker_Bio.txt" download class="download-btn">
+					Download Speaker Bio
+				</a>
 			</div>
 		</div>
 
@@ -33,18 +36,49 @@ import headshotImage from '../assets/images/site/engates_john.jpg';
 			<h2>Current Focus</h2>
 			<p>{config.author.bio}</p>
 
-			<h2>Career Journey</h2>
-			<p>As Field CTO at Cloudflare (2021-2025), I guided global enterprises through their AI and security transformations. Previously, as CTO at Rackspace for almost 18 years, I played a pivotal role in democratizing cloud computing. I helped bring "Fanatical Support" to life, building the culture and teams that set a new standard for customer service in tech. Under my leadership, Rackspace's Intensive Hosting division supported some of the Internet's most demanding workloads, including a little startup called YouTube.</p>
+			<h2>Professional Journey</h2>
+			
+			<div class="timeline">
+				<div class="timeline-item">
+					<h3>Field Chief Technology Officer - Cloudflare</h3>
+					<span class="timeline-date">2021 - 2025</span>
+					<p>Leading global Field CTO organization, guiding enterprises through AI and security transformations. Focusing on Zero Trust architectures, SASE solutions, and helping organizations prepare for the post-quantum era.</p>
+				</div>
 
-			<p>My knack for seeing around corners led to founding moments in open source infrastructure. When Frank Frankovsky reached out via Facebook message about "open sourcing cloud computing hardware," my immediate "yes" launched Rackspace's involvement in the Open Compute Project. I also led the RackLabs team that created the distributed storage system that became OpenStack Swift, now powering some of the largest storage platforms on Earth.</p>
+				<div class="timeline-item">
+					<h3>Client Chief Technology Officer - NTT Global Networks</h3>
+					<span class="timeline-date">2018 - 2020</span>
+					<p>Led technology strategy and client engagements for one of the world's largest telecommunications companies, bridging the gap between complex network infrastructure and business value.</p>
+				</div>
 
-			<h2>Notable Achievements</h2>
+				<div class="timeline-item">
+					<h3>Chief Technology Officer - Rackspace Technology</h3>
+					<span class="timeline-date">2002 - 2018</span>
+					<p>18-year journey from employee #35 to CTO, helping grow the company from startup to over $2 billion in annual revenue. Created the Intensive Hosting division that supported Internet giants including YouTube in its early days. Pioneered "Fanatical Support" culture that became an industry standard. Led the company through IPO and established Rackspace as a leader in managed cloud services.</p>
+				</div>
+
+				<div class="timeline-item">
+					<h3>Founder & General Manager - Internet Direct</h3>
+					<span class="timeline-date">1995 - 2000</span>
+					<p>Founded one of Texas's first Internet Service Providers, growing to over 10,000 customers in the San Antonio area. This early entrepreneurial experience laid the foundation for understanding how to scale Internet infrastructure.</p>
+				</div>
+			</div>
+
+			<h2>Major Achievements & Contributions</h2>
 			<ul class="achievements-list">
-				<li>Called to the White House to help rescue Healthcare.gov in 2013</li>
-				<li>Testified before Congress on cloud computing's strategic value</li>
-				<li>Founding contributor to OpenStack and Open Compute Project</li>
-				<li>Named UTSA Alumnus of the Year in 2014</li>
-				<li>Board member at Frost Bank (NYSE: CFR) and James Avery Craftsman</li>
+				<li><strong>Healthcare.gov Crisis Response (2013)</strong> - Called to the White House to help rescue the failing website during a critical national healthcare rollout</li>
+				<li><strong>Congressional Testimony</strong> - Testified before the U.S. House Committee on Oversight and Government Reform on cloud computing's strategic value for government</li>
+				<li><strong>OpenStack Co-founder</strong> - Led creation of the distributed storage system that became OpenStack Swift, now powering some of the world's largest storage platforms</li>
+				<li><strong>Open Compute Project Board Member</strong> - Helped "open source cloud computing hardware" as one of the founding board members, democratizing data center innovation</li>
+				<li><strong>Board Leadership</strong> - Currently serving on boards of Frost Bank (NYSE: CFR) and James Avery Craftsman Jewelry</li>
+			</ul>
+
+			<h2>Awards & Recognition</h2>
+			<ul class="achievements-list">
+				<li><strong>UTSA Alumnus of the Year</strong> - University of Texas at San Antonio (2014)</li>
+				<li><strong>CTO of the Year</strong> - San Antonio Business Journal Tech Titans Award (2014)</li>
+				<li><strong>Top 50 Influencers in Cybersecurity</strong> - CIO Magazine</li>
+				<li><strong>Cloudflare Innovator Award</strong> - For excellence in cybersecurity strategy</li>
 			</ul>
 
 			<h2>Current Research</h2>
@@ -113,6 +147,10 @@ import headshotImage from '../assets/images/site/engates_john.jpg';
 
 	.download-links {
 		margin-top: calc(var(--grid-unit) * 3);
+		display: flex;
+		gap: calc(var(--grid-unit) * 2);
+		justify-content: center;
+		flex-wrap: wrap;
 	}
 
 	.download-btn {
@@ -164,6 +202,52 @@ import headshotImage from '../assets/images/site/engates_john.jpg';
 		left: calc(var(--grid-unit));
 		color: var(--color-accent);
 		font-size: 1.25rem;
+	}
+
+	.timeline {
+		margin: calc(var(--grid-unit) * 4) 0;
+	}
+
+	.timeline-item {
+		border-left: 3px solid var(--color-accent);
+		padding-left: calc(var(--grid-unit) * 4);
+		margin-bottom: calc(var(--grid-unit) * 5);
+		position: relative;
+	}
+
+	.timeline-item::before {
+		content: '';
+		position: absolute;
+		left: -8px;
+		top: 0;
+		width: 13px;
+		height: 13px;
+		background-color: var(--color-accent);
+		border-radius: 50%;
+		border: 3px solid var(--color-background);
+	}
+
+	.timeline-item h3 {
+		font-size: 1.25rem;
+		margin-bottom: calc(var(--grid-unit));
+		color: var(--color-text-primary);
+	}
+
+	.timeline-date {
+		display: inline-block;
+		font-family: var(--font-heading-secondary);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-size: 0.875rem;
+		color: var(--color-accent);
+		margin-bottom: calc(var(--grid-unit) * 2);
+	}
+
+	.timeline-item p {
+		margin: 0;
+		line-height: 1.8;
+		color: var(--color-text-secondary);
 	}
 
 	.contact-section {
