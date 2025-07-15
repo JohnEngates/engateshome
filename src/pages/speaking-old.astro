@@ -1,0 +1,955 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { config } from '../config';
+import { Image } from 'astro:assets';
+import speakingImage from '../assets/images/site/gigaom-speaking.jpg';
+import cloudflareFirstConfImage from '../assets/images/site/cloudflare-first-conference.jpg';
+import whitehouse1 from '../assets/images/site/whitehouse-1.jpg';
+import whitehouse2 from '../assets/images/site/whitehouse-2.jpg';
+import whitehouse3 from '../assets/images/site/whitehouse-3.jpg';
+import whitehouseSideView from '../assets/images/site/whitehouse-side-view.jpg';
+import wozniakImage from '../assets/images/site/wozniak-newrelic.jpg';
+import cnnInterviewImage from '../assets/images/site/cnn-healthcare-interview.jpg';
+import potsdamSpeakingImage from '../assets/images/site/potsdam-speaking.jpg';
+import latamPanelImage from '../assets/images/site/latam-ciso-panel.jpg';
+import cloudflareImmerseImage from '../assets/images/site/cloudflare-immerse-houston.jpg';
+import ais2012Image from '../assets/images/site/ais-2012-speaking.jpg';
+---
+
+<Layout title={`Speaking - ${config.title}`} description="Keynote speaker and technology thought leader on AI, cloud computing, and digital transformation">
+	<section class="speaking-header">
+		<h1>Speaking & Media</h1>
+		<p class="subtitle">Sharing insights on AI, cloud computing, and digital transformation</p>
+	</section>
+
+	<section class="speaking-intro">
+		<p>With over 30 years of experience at the forefront of technology innovation, I bring unique perspectives on AI transformation, multi-agent systems, cloud computing, and cybersecurity. From testifying before Congress to advising at the White House, I've had the privilege of shaping technology policy and strategy at the highest levels.</p>
+	</section>
+
+	<section class="speaking-hero">
+		<a href={speakingImage.src} target="_blank">
+			<Image 
+				src={speakingImage} 
+				alt="John Engates speaking at GigaOM Conference" 
+				class="speaking-photo clickable"
+				width={1200}
+				height={800}
+				format="webp"
+				quality={90}
+			/>
+		</a>
+		<p class="photo-caption">Speaking at GigaOM Conference on cloud infrastructure and digital transformation</p>
+	</section>
+
+	<section class="featured-appearances">
+		<h2>Speaking Engagements & Media Appearances</h2>
+		<p class="section-intro">A chronological journey through keynotes, podcasts, and media appearances spanning cloud computing, cybersecurity, and AI transformation.</p>
+		
+		<div class="year-section">
+			<h3 class="year-header">2024</h3>
+			<div class="appearances-grid">
+			<article class="appearance-card highlight">
+				<h3>White House Technology Advisory</h3>
+				<p class="appearance-context">Healthcare.gov Rescue Mission • November 25, 2013</p>
+				<p>Invited to the White House Situation Room alongside tech industry leaders to validate the "tech surge" strategy for fixing Healthcare.gov. Visited the operations center at QSSI, met with point person Jeffrey Zients, and advised on centralizing contractors, implementing automation, and optimizing database performance. Part of an effort to broaden government IT procurement beyond traditional contractors.</p>
+				<div class="whitehouse-photos">
+					<a href={whitehouse1.src} target="_blank" class="photo-link">
+						<Image 
+							src={whitehouse1} 
+							alt="John Engates at the White House" 
+							class="whitehouse-photo clickable"
+							width={300}
+							height={400}
+							format="webp"
+							quality={85}
+						/>
+					</a>
+					<a href={whitehouse2.src} target="_blank" class="photo-link">
+						<Image 
+							src={whitehouse2} 
+							alt="White House visit for Healthcare.gov" 
+							class="whitehouse-photo clickable"
+							width={300}
+							height={400}
+							format="webp"
+							quality={85}
+						/>
+					</a>
+					<a href={whitehouse3.src} target="_blank" class="photo-link">
+						<Image 
+							src={whitehouse3} 
+							alt="At the White House for Healthcare.gov recovery" 
+							class="whitehouse-photo clickable"
+							width={300}
+							height={400}
+							format="webp"
+							quality={85}
+						/>
+					</a>
+				</div>
+				<div class="whitehouse-hero-photo">
+					<a href={whitehouseSideView.src} target="_blank" class="photo-link">
+						<Image 
+							src={whitehouseSideView} 
+							alt="Side view of the White House on the way to the Situation Room" 
+							class="whitehouse-main-photo clickable"
+							width={800}
+							height={600}
+							format="webp"
+							quality={90}
+						/>
+					</a>
+					<p class="image-caption">Approaching the West Wing and Situation Room for the Healthcare.gov crisis meeting - November 25, 2013</p>
+				</div>
+				<a href="https://www.infoworld.com/article/2171830/the-inside-scoop-on-how-healthcare-gov-is-getting-fixed.html" target="_blank" rel="noopener" class="appearance-link">Read Full Account →</a>
+			</article>
+
+			<article class="appearance-card highlight">
+				<h3>Congressional Testimony</h3>
+				<p class="appearance-context">"The State of the Cloud" • September 22, 2015 • UTSA</p>
+				<p>Testified before the House Committee on Oversight and Government Reform alongside leaders from AWS, VMware, and DHS. Addressed the critical need for cloud adoption in federal IT, where only 2% of major agency budgets were allocated to cloud computing despite $80 billion in annual IT spending.</p>
+				<a href="https://oversight.house.gov/hearing/oversight-it-subcommittee-committee-to-examine-cloud-solutions/" target="_blank" rel="noopener" class="appearance-link">View Hearing Details →</a>
+			</article>
+
+			<article class="appearance-card highlight special">
+				<h3>Cloudflare's First Customer Conference</h3>
+				<p class="appearance-context">Historic Speaking Engagement • Internet Summit</p>
+				<p>Invited as a featured speaker at Cloudflare's inaugural customer conference while serving as CTO at Rackspace. Shared the stage with industry luminaries including Sir Tim Berners-Lee, inventor of the World Wide Web, and Cloudflare co-founder Michelle Zatlyn.</p>
+				<div class="appearance-image">
+					<a href={cloudflareFirstConfImage.src} target="_blank">
+						<Image 
+							src={cloudflareFirstConfImage} 
+							alt="John Engates with Sir Tim Berners-Lee and Michelle Zatlyn at Cloudflare's first conference" 
+							class="conference-photo clickable"
+							width={600}
+							height={450}
+							format="webp"
+							quality={90}
+						/>
+					</a>
+					<p class="image-caption">With Sir Tim Berners-Lee and Michelle Zatlyn at Cloudflare's first customer conference</p>
+				</div>
+			</article>
+
+			<article class="appearance-card highlight special">
+				<h3>New Relic's First Customer Conference</h3>
+				<p class="appearance-context">FutureStack • Inaugural Conference</p>
+				<p>Featured speaker at New Relic's first customer conference, sharing the stage with Steve Wozniak, co-founder of Apple. Discussed the future of application performance monitoring and the evolving DevOps landscape.</p>
+				<div class="appearance-image">
+					<a href={wozniakImage.src} target="_blank">
+						<Image 
+							src={wozniakImage} 
+							alt="John Engates with Steve Wozniak at New Relic FutureStack" 
+							class="conference-photo clickable"
+							width={600}
+							height={450}
+							format="webp"
+							quality={90}
+						/>
+					</a>
+					<p class="image-caption">With Steve Wozniak, co-founder of Apple, at New Relic's inaugural FutureStack conference</p>
+				</div>
+			</article>
+
+			<article class="appearance-card">
+				<h3>InsideDT Podcast</h3>
+				<p class="appearance-context">Episode 25: AI Impact on Enterprise Cyber Security • August 2023</p>
+				<p>Deep dive into how AI is transforming enterprise IT and cybersecurity, discussing the role of multi-agent systems in the future of technology.</p>
+				<a href="https://podcasts.apple.com/be/podcast/s1-e25-cloudflares-john-engates-the-impact-of-ai/id1657857948?i=1000624747816" target="_blank" rel="noopener" class="appearance-link">Listen on Apple Podcasts →</a>
+			</article>
+
+			<article class="appearance-card">
+				<h3>alphalist CTO Podcast</h3>
+				<p class="appearance-context">Episode 75: Field CTO Insights • April 2023</p>
+				<p>Explored the intersection of AI and DevOps, incident response automation, and the evolving role of technology leadership at scale.</p>
+				<a href="https://alphalist.com/podcast/75-john-engates-field-cto-cloudflare" target="_blank" rel="noopener" class="appearance-link">Listen to Episode →</a>
+			</article>
+
+			<article class="appearance-card">
+				<h3>ISSA International Conference</h3>
+				<p class="appearance-context">Keynote Speaker • Security Leadership</p>
+				<p>Featured speaker at the Information Systems Security Association conference, discussing the convergence of AI and cybersecurity, and how organizations can prepare for emerging threats.</p>
+				<a href="https://issa.org/speaker/john-engates" target="_blank" rel="noopener" class="appearance-link">View Profile →</a>
+			</article>
+
+			<article class="appearance-card">
+				<h3>Software in Blue Podcast</h3>
+				<p class="appearance-context">Episode 38 • Cloud & Edge Computing</p>
+				<p>In-depth conversation about the evolution of cloud computing, edge infrastructure, and how modern platforms are enabling new possibilities in distributed computing.</p>
+				<a href="https://www.softwareinblue.com/episode38/" target="_blank" rel="noopener" class="appearance-link">Listen to Episode →</a>
+			</article>
+
+			<article class="appearance-card">
+				<h3>This Week in Enterprise Tech (TWiT)</h3>
+				<p class="appearance-context">Episode 530: The Death of 'The Password' • February 2023</p>
+				<p>Featured guest discussing passwordless authentication options, ransomware recovery strategies, and the future of enterprise security with Cloudflare's Zero Trust solutions.</p>
+				<a href="https://twit.tv/shows/this-week-in-enterprise-tech/episodes/530" target="_blank" rel="noopener" class="appearance-link">Watch Episode →</a>
+			</article>
+
+			<article class="appearance-card">
+				<h3>YouTube Video Appearance</h3>
+				<p class="appearance-context">Technology Insights • Video Interview</p>
+				<p>Featured discussion on emerging technologies and their impact on enterprise IT infrastructure and security strategies.</p>
+				<a href="https://www.youtube.com/watch?v=MkWQZx7OOhQ" target="_blank" rel="noopener" class="appearance-link">Watch Video →</a>
+			</article>
+
+			<article class="appearance-card">
+				<h3>TechStrong TV</h3>
+				<p class="appearance-context">The Last Great Cloud Transformation • September 2024</p>
+				<p>Co-host discussing the connectivity cloud revolution and how network modernization represents the final frontier in cloud computing transformation.</p>
+				<a href="https://techstrong.tv/videos/the-last-great-cloud-transformation/connectivity-cloud-the-last-great-cloud-transformation-ep1" target="_blank" rel="noopener" class="appearance-link">Watch Episode →</a>
+			</article>
+
+			<article class="appearance-card">
+				<h3>Cloud Control Podcast</h3>
+				<p class="appearance-context">Building a Better Internet • September 2023</p>
+				<p>Discussed the evolution of internet infrastructure, edge computing, and how modern platforms are enabling developers to build global applications.</p>
+				<a href="https://open.spotify.com/episode/5dEjCzcn27kiuxOnLr76JE?si=4XyvIhWWSMCynKmlI-L9CQ" target="_blank" rel="noopener" class="appearance-link">Listen on Spotify →</a>
+			</article>
+
+			<article class="appearance-card">
+				<h3>Cloud Talk</h3>
+				<p class="appearance-context">Zero Trust Everywhere • February 2022</p>
+				<p>Explored the implementation of Zero Trust architectures and how organizations can secure their infrastructure in a perimeter-less world.</p>
+				<a href="https://www.rackspace.com/solve/zero-trust-everywhere" target="_blank" rel="noopener" class="appearance-link">Listen to Episode →</a>
+			</article>
+
+			<article class="appearance-card highlight">
+				<h3>Cloudflare TV - Incident Response Series</h3>
+				<p class="appearance-context">Behind the Scenes: Log4j Response • May 2022</p>
+				<p>With CTO John Graham-Cumming, detailed examination of how Cloudflare responds to critical vulnerabilities. Deep dive into the Log4j incident response, demonstrating real-world security leadership during major threats.</p>
+				<a href="https://cloudflare.tv/this-week-in-net/cto-perspectives-on-the-cyber-threat-landscape/8aqKG6gW" target="_blank" rel="noopener" class="appearance-link">Watch Episode →</a>
+			</article>
+
+			<article class="appearance-card">
+				<h3>Evanta CISO Town Hall</h3>
+				<p class="appearance-context">Indianapolis • Executive Security Summit</p>
+				<p>Featured speaker at exclusive CISO gathering, discussing Zero Trust architectures and the evolving role of security leadership.</p>
+				<a href="https://www.evanta.com/ciso/indianapolis/indianapolis-ciso-town-hall-6680" target="_blank" rel="noopener" class="appearance-link">Event Details →</a>
+			</article>
+
+			<article class="appearance-card highlight special">
+				<h3>Potsdam Conference for National Cybersecurity</h3>
+				<p class="appearance-context">10th Anniversary Conference • Hasso Plattner Institute, Germany • April 2023</p>
+				<p>International keynote speaker at Germany's premier cybersecurity conference, addressing national security experts, government officials, and industry leaders on global cyber threats and defense strategies.</p>
+				<div class="appearance-image">
+					<a href={potsdamSpeakingImage.src} target="_blank">
+						<Image 
+							src={potsdamSpeakingImage} 
+							alt="John Engates speaking at Potsdam Conference for National Cybersecurity" 
+							class="conference-photo clickable"
+							width={800}
+							height={600}
+							format="webp"
+							quality={90}
+						/>
+					</a>
+					<p class="image-caption">Keynote address at the 10th Potsdam Conference for National Cybersecurity, Germany</p>
+				</div>
+				<a href="https://hpi.de/fileadmin/user_upload/060_News/2023/10-Jahre-Potsdamer-Konferenz-fuer-Nationale-CyberSicherheit/230413_Tagungsunterlagen_Sicherheitskonferenz_innen_DE_web.pdf" target="_blank" rel="noopener" class="appearance-link">View Conference Program →</a>
+			</article>
+
+			<article class="appearance-card highlight special">
+				<h3>LATAM CISO Summit 2024</h3>
+				<p class="appearance-context">Digi Americas • Costa Rica • Panel Moderator</p>
+				<p>Panel moderator for "Enhancing Security through Frameworks: Best Practices in Action" with distinguished panelists from NIST, Televisa Univision, Cybersec Cluster, and Cyber Risk Institute. Engaged with government and industry leaders on cybersecurity frameworks, emerging threats, and digital policy development across the Americas.</p>
+				<div class="appearance-image">
+					<a href={latamPanelImage.src} target="_blank">
+						<Image 
+							src={latamPanelImage} 
+							alt="John Engates moderating panel at LATAM CISO Summit in Costa Rica" 
+							class="conference-photo clickable"
+							width={800}
+							height={600}
+							format="webp"
+							quality={90}
+						/>
+					</a>
+					<p class="image-caption">Moderating cybersecurity frameworks panel at LATAM CISO Summit 2024 in Costa Rica</p>
+				</div>
+			</article>
+
+			<article class="appearance-card highlight special">
+				<h3>Cloudflare Immerse Houston</h3>
+				<p class="appearance-context">Executive Technology Summit • Houston • 2024</p>
+				<p>Featured speaker at Cloudflare's exclusive executive event in Houston, addressing senior technology leaders on the future of connectivity cloud, AI security, and digital transformation strategies for enterprise organizations.</p>
+				<div class="appearance-image">
+					<a href={cloudflareImmerseImage.src} target="_blank">
+						<Image 
+							src={cloudflareImmerseImage} 
+							alt="John Engates speaking at Cloudflare Immerse Houston" 
+							class="conference-photo clickable"
+							width={800}
+							height={600}
+							format="webp"
+							quality={90}
+						/>
+					</a>
+					<p class="image-caption">Speaking at Cloudflare Immerse Houston - Executive technology summit for enterprise leaders</p>
+				</div>
+				<a href="https://immersehouston.splashthat.com/" target="_blank" rel="noopener" class="appearance-link">Event Details →</a>
+			</article>
+
+			<article class="appearance-card highlight special">
+				<h3>AIS 2012 Conference</h3>
+				<p class="appearance-context">Applied Information Systems • 2012</p>
+				<p>Keynote speaker at AIS 2012, discussing cloud computing transformation, the future of enterprise IT infrastructure, and the revolutionary changes happening in data center technology and service delivery models.</p>
+				<div class="appearance-image">
+					<a href={ais2012Image.src} target="_blank">
+						<Image 
+							src={ais2012Image} 
+							alt="John Engates speaking at AIS 2012 Conference" 
+							class="conference-photo clickable"
+							width={800}
+							height={600}
+							format="webp"
+							quality={90}
+						/>
+					</a>
+					<p class="image-caption">Keynote presentation at AIS 2012 Conference on cloud computing and enterprise transformation</p>
+				</div>
+			</article>
+		</div>
+		
+		<p class="appearances-note">With over a decade of podcast appearances spanning topics from cloud infrastructure to AI transformation, these represent just a selection of recent discussions. <a href="https://podcastdetails.com/people?q=John+Engates" target="_blank" rel="noopener">View complete podcast history →</a></p>
+	</section>
+
+	<section class="speaking-topics">
+		<h2>Speaking Topics</h2>
+		<div class="topics-grid">
+			<div class="topic-card">
+				<h3>Multi-Agent AI Systems</h3>
+				<p>The future of AI lies in collaborative agent systems. I explore how swarms of specialized AI agents can solve complex problems beyond the capabilities of monolithic models.</p>
+			</div>
+			<div class="topic-card">
+				<h3>Cloud & Edge Computing</h3>
+				<p>From co-founding OpenStack to securing the edge at Cloudflare, I share insights on the evolution of distributed computing and what's next.</p>
+			</div>
+			<div class="topic-card">
+				<h3>Cybersecurity in the AI Era</h3>
+				<p>How AI is transforming both attack and defense strategies, and what organizations need to know to stay secure.</p>
+			</div>
+			<div class="topic-card">
+				<h3>Digital Transformation</h3>
+				<p>Practical insights from guiding Fortune 500 companies through technology transformations, from legacy modernization to AI adoption.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="television-appearances">
+		<h2>Television & Major Media</h2>
+		<div class="tv-grid">
+			<article class="tv-card featured">
+				<h3>CNN Live Interview</h3>
+				<p class="tv-context">Healthcare.gov Crisis Coverage • 2013</p>
+				<p>Live television interview discussing the technical challenges and recovery efforts for Healthcare.gov, providing expert analysis during a critical moment in U.S. healthcare policy.</p>
+				<div class="tv-image">
+					<a href={cnnInterviewImage.src} target="_blank">
+						<Image 
+							src={cnnInterviewImage} 
+							alt="John Engates live on CNN discussing Healthcare.gov" 
+							class="tv-screenshot clickable"
+							width={800}
+							height={450}
+							format="webp"
+							quality={90}
+						/>
+					</a>
+					<p class="image-caption">Live on CNN providing expert analysis on the Healthcare.gov recovery efforts</p>
+				</div>
+			</article>
+		</div>
+	</section>
+
+	<section class="media-mentions">
+		<h2>Media & Press</h2>
+		<p>Regular contributor to technology discussions in major media outlets, industry publications, and technology podcasts. Topics range from cloud computing trends to AI ethics and the future of work.</p>
+		
+		<div class="media-grid">
+			<article class="media-card">
+				<h3>Wall Street Journal</h3>
+				<p class="media-context">Partner Content • Cloud Transformation</p>
+				<p>The Last Frontier of Cloud Transformation - Insights on how organizations can leverage edge computing and modern cloud architectures for competitive advantage.</p>
+				<a href="https://partners.wsj.com/cloudflare/the-need-for-a-new-kind-of-cloud/the-last-frontier-of-cloud-transformation/" target="_blank" rel="noopener" class="media-link">Read Article →</a>
+			</article>
+
+			<article class="media-card">
+				<h3>The Enterprisers Project</h3>
+				<p class="media-context">CIO Strategy • January 2023</p>
+				<p>5 Strategies for CIO Success in 2023 - Practical guidance for technology leaders navigating digital transformation and emerging technologies.</p>
+				<a href="https://enterprisersproject.com/article/2023/1/5-strategies-cio-success-2023" target="_blank" rel="noopener" class="media-link">Read Article →</a>
+			</article>
+
+			<article class="media-card">
+				<h3>The NET by Cloudflare</h3>
+				<p class="media-context">Top of Mind Technology • Regular Contributor</p>
+				<p>Contributing thought leadership articles on emerging technologies, cybersecurity trends, and the future of the Internet for Cloudflare's executive insights publication.</p>
+				<a href="https://www.cloudflare.com/the-net/top-of-mind-technology/" target="_blank" rel="noopener" class="media-link">View Articles →</a>
+			</article>
+
+			<article class="media-card">
+				<h3>Security Boulevard</h3>
+				<p class="media-context">AI Security • March 2023</p>
+				<p>How to Protect Your Company in a ChatGPT World - Exploring the security implications of generative AI and practical strategies for enterprise protection.</p>
+				<a href="https://securityboulevard.com/2023/03/how-to-protect-your-company-in-a-chatgpt-world/" target="_blank" rel="noopener" class="media-link">Read Article →</a>
+			</article>
+
+			<article class="media-card">
+				<h3>Data Center Dynamics</h3>
+				<p class="media-context">AI at the Edge • 2024</p>
+				<p>How Cloudflare Plans to Dominate Generative AI at the Edge - Analysis of Cloudflare's strategy to bring AI inference to the network edge.</p>
+				<a href="https://www.datacenterdynamics.com/en/analysis/how-cloudflare-plans-to-dominate-generative-ai-at-the-edge/" target="_blank" rel="noopener" class="media-link">Read Article →</a>
+			</article>
+
+			<article class="media-card">
+				<h3>CIO Influence</h3>
+				<p class="media-context">Executive Interview • Field CTO Insights</p>
+				<p>In-depth interview covering cloud transformation, AI adoption strategies, and the evolving role of technology leadership in modern enterprises.</p>
+				<a href="https://cioinfluence.com/cloud/cio-influence-interview-with-john-engates-field-chief-technology-officer-at-cloudflare/" target="_blank" rel="noopener" class="media-link">Read Interview →</a>
+			</article>
+
+			<article class="media-card">
+				<h3>DevOps.com</h3>
+				<p class="media-context">DevOps Culture • Two-Part Series</p>
+				<p>The DevOps Litmus Test & Making DevOps a Reality - Examining organizational readiness for agile transformation and the collaborative progress needed for successful DevOps adoption.</p>
+				<a href="https://devops.com/devops-litmus-test-companys-culture-ready-get-agile/" target="_blank" rel="noopener" class="media-link">Part 1 →</a> | 
+				<a href="https://devops.com/collaboration-progress-making-devops-reality/" target="_blank" rel="noopener" class="media-link">Part 2 →</a>
+			</article>
+
+			<article class="media-card">
+				<h3>CEO Insights Asia</h3>
+				<p class="media-context">Chief Zero Trust Officer • Executive Insights</p>
+				<p>A New CXO Emerges: The Chief Zero Trust Officer - Exploring the emergence of a critical new executive role in modern cybersecurity leadership.</p>
+				<a href="https://www.ceoinsightsasia.com/industry-insider/a-new-cxo-emerges-the-chief-zero-trust-officer-nwid-10378.html" target="_blank" rel="noopener" class="media-link">Read Article →</a>
+			</article>
+
+			<article class="media-card">
+				<h3>Intelligent CIO</h3>
+				<p class="media-context">Security Leadership • January 2023</p>
+				<p>The Rise of Chief Zero Trust Officer - Analysis of how Zero Trust architecture is driving new C-suite roles and organizational structures.</p>
+				<a href="https://www.intelligentcio.com/north-america/2023/01/03/the-rise-of-chief-zero-trust-officer/" target="_blank" rel="noopener" class="media-link">Read Article →</a>
+			</article>
+
+			<article class="media-card">
+				<h3>Channel Post MEA</h3>
+				<p class="media-context">Tech Predictions • 2023 & 2025</p>
+				<p>Annual technology predictions covering AI, edge computing, cybersecurity trends, and the future of enterprise infrastructure.</p>
+				<a href="https://channelpostmea.com/2025/01/03/cloudflare-shares-top-2025-tech-predictions/" target="_blank" rel="noopener" class="media-link">2025 Predictions →</a> | 
+				<a href="https://channelpostmea.com/2023/01/04/technology-predictions-cloudflare-2023/" target="_blank" rel="noopener" class="media-link">2023 Predictions →</a>
+			</article>
+
+			<article class="media-card">
+				<h3>Tahawul Tech</h3>
+				<p class="media-context">AI & Edge Computing • Opinion</p>
+				<p>To Unlock AI's True Potential - How edge computing must bring compute power closer to where it's needed for AI transformation.</p>
+				<a href="https://www.tahawultech.com/insight/opinion/to-unlock-ais-true-potential-edge-computing-must-bring-the-compute-power-closer-to-where-its-needed-john-engates-cloudflare/" target="_blank" rel="noopener" class="media-link">Read Opinion →</a>
+			</article>
+
+			<article class="media-card">
+				<h3>CIO Southeast Asia</h3>
+				<p class="media-context">Cloud Economics • Economic Times</p>
+				<p>How Cloud Egress Fees Will Challenge the Future of AI - Examining the economic barriers to AI adoption and the need for new cloud pricing models.</p>
+				<a href="https://ciosea.economictimes.indiatimes.com/blog/how-cloud-egress-fees-will-challenge-the-future-of-ai/100273944" target="_blank" rel="noopener" class="media-link">Read Article →</a>
+			</article>
+
+			<article class="media-card">
+				<h3>GigaOM</h3>
+				<p class="media-context">OpenStack Innovation • CERN Collaboration</p>
+				<p>Rackspace and CERN Collaborate on Massive OpenStack Hybrid Cloud - Detailing the groundbreaking partnership to build one of the world's largest scientific computing infrastructures using OpenStack.</p>
+				<a href="https://openlab-archive-iv-v.web.cern.ch/sites/test-static-05.web.cern.ch/files/press-coverage/Y/M/gigaom.com%20-%20Rackspace%20and%20CERN%20collaborate%20on%20massive%20OpenStack%20hybrid%20cloud%20%E2%80%94%20Tech%20News.pdf" target="_blank" rel="noopener" class="media-link">Read Article →</a>
+			</article>
+		</div>
+	</section>
+
+	<section class="booking-cta">
+		<h2>Book John for Your Event</h2>
+		<p>I'm available for keynotes, panel discussions, fireside chats, and workshop sessions. Whether it's a technical deep-dive or executive strategy session, I tailor each presentation to your audience's needs.</p>
+		<div class="booking-buttons">
+			<a href="mailto:jengates@gmail.com?subject=Speaking%20Inquiry" class="booking-btn primary">
+				Inquire About Speaking
+			</a>
+			<a href="/about#contact" class="booking-btn secondary">
+				Learn More About John
+			</a>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.speaking-header {
+		text-align: center;
+		padding: calc(var(--grid-unit) * 6) 0;
+		border-bottom: 4px solid var(--color-accent);
+		margin-bottom: calc(var(--grid-unit) * 6);
+	}
+
+	.subtitle {
+		font-size: 1.25rem;
+		color: var(--color-text-secondary);
+		font-weight: 500;
+		letter-spacing: 0.05em;
+		margin: 0;
+	}
+
+	.speaking-intro {
+		max-width: 800px;
+		margin: 0 auto calc(var(--grid-unit) * 6) auto;
+		text-align: center;
+	}
+
+	.speaking-intro p {
+		font-size: 1.125rem;
+		line-height: 1.8;
+	}
+
+	.speaking-hero {
+		max-width: 1000px;
+		margin: 0 auto calc(var(--grid-unit) * 6) auto;
+		text-align: center;
+	}
+
+	.speaking-photo {
+		width: 100%;
+		height: auto;
+		border-radius: calc(var(--grid-unit));
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+		display: block;
+	}
+
+	.photo-caption {
+		margin-top: calc(var(--grid-unit) * 2);
+		font-size: 0.875rem;
+		color: var(--color-text-muted);
+		font-style: italic;
+		line-height: 1.4;
+	}
+
+	.featured-appearances {
+		margin-bottom: calc(var(--grid-unit) * 8);
+	}
+
+	.appearances-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: calc(var(--grid-unit) * 4);
+		margin-top: calc(var(--grid-unit) * 4);
+	}
+
+	.appearance-card {
+		background-color: var(--color-surface);
+		padding: calc(var(--grid-unit) * 4);
+		border-radius: calc(var(--grid-unit));
+		border: 2px solid var(--color-border);
+		transition: all 0.3s ease;
+	}
+
+	.appearance-card.highlight {
+		border-color: var(--color-accent);
+		position: relative;
+	}
+
+	.appearance-card.highlight::before {
+		content: "FEATURED";
+		position: absolute;
+		top: calc(var(--grid-unit) * 2);
+		right: calc(var(--grid-unit) * 2);
+		background-color: var(--color-accent);
+		color: white;
+		padding: calc(var(--grid-unit) / 2) calc(var(--grid-unit));
+		font-family: var(--font-heading-secondary);
+		font-size: 0.75rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		border-radius: 4px;
+	}
+
+	.appearance-card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+	}
+
+	.appearance-card h3 {
+		font-size: 1.5rem;
+		margin-bottom: calc(var(--grid-unit));
+	}
+
+	.appearance-context {
+		font-family: var(--font-mono);
+		font-size: 0.875rem;
+		color: var(--color-text-muted);
+		margin-bottom: calc(var(--grid-unit) * 2);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.appearance-card p:last-child {
+		margin: 0;
+		line-height: 1.6;
+	}
+
+	.appearance-link {
+		display: inline-block;
+		margin-top: calc(var(--grid-unit) * 2);
+		color: var(--color-accent);
+		font-family: var(--font-heading-secondary);
+		font-weight: 700;
+		font-size: 0.875rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		text-decoration: none;
+		transition: all 0.2s ease;
+	}
+
+	.appearance-link:hover {
+		text-decoration: underline;
+		transform: translateX(4px);
+	}
+
+	.appearance-card.special {
+		border-color: var(--color-accent);
+		border-width: 3px;
+	}
+
+	.appearance-image {
+		margin-top: calc(var(--grid-unit) * 3);
+		border-radius: calc(var(--grid-unit));
+		overflow: hidden;
+	}
+
+	.conference-photo {
+		width: 100%;
+		height: auto;
+		display: block;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	}
+
+	.appearance-image .image-caption {
+		margin-top: calc(var(--grid-unit));
+		font-size: 0.875rem;
+		color: var(--color-text-muted);
+		font-style: italic;
+		text-align: center;
+		line-height: 1.4;
+	}
+
+	.whitehouse-photos {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: calc(var(--grid-unit) * 2);
+		margin: calc(var(--grid-unit) * 3) 0;
+	}
+
+	.whitehouse-photo {
+		width: 100%;
+		height: auto;
+		border-radius: calc(var(--grid-unit));
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.whitehouse-hero-photo {
+		margin: calc(var(--grid-unit) * 3) 0;
+		border-radius: calc(var(--grid-unit));
+		overflow: hidden;
+	}
+
+	.whitehouse-main-photo {
+		width: 100%;
+		height: auto;
+		display: block;
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+	}
+
+	/* Clickable image styles */
+	.clickable {
+		cursor: pointer;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.clickable:hover {
+		transform: scale(1.02);
+		box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+	}
+
+	.photo-link {
+		display: block;
+		text-decoration: none;
+	}
+
+	@media (max-width: 768px) {
+		.whitehouse-photos {
+			grid-template-columns: 1fr;
+			gap: calc(var(--grid-unit));
+		}
+	}
+
+	.appearances-note {
+		text-align: center;
+		margin-top: calc(var(--grid-unit) * 4);
+		font-size: 1rem;
+		color: var(--color-text-secondary);
+		line-height: 1.6;
+	}
+
+	.appearances-note a {
+		color: var(--color-accent);
+		font-weight: 600;
+		text-decoration: none;
+		transition: all 0.2s ease;
+	}
+
+	.appearances-note a:hover {
+		text-decoration: underline;
+	}
+
+	.speaking-topics {
+		background-color: var(--color-surface);
+		padding: calc(var(--grid-unit) * 6);
+		border-radius: calc(var(--grid-unit));
+		margin-bottom: calc(var(--grid-unit) * 8);
+	}
+
+	.topics-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: calc(var(--grid-unit) * 4);
+		margin-top: calc(var(--grid-unit) * 4);
+	}
+
+	.topic-card {
+		background-color: var(--color-background);
+		padding: calc(var(--grid-unit) * 3);
+		border-radius: calc(var(--grid-unit));
+		border: 1px solid var(--color-border);
+	}
+
+	.topic-card h3 {
+		font-size: 1.25rem;
+		margin-bottom: calc(var(--grid-unit) * 2);
+		color: var(--color-accent);
+	}
+
+	.topic-card p {
+		font-size: 1rem;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	.media-mentions {
+		text-align: center;
+		margin-bottom: calc(var(--grid-unit) * 8);
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.television-appearances {
+		margin-bottom: calc(var(--grid-unit) * 8);
+		background-color: var(--color-surface);
+		padding: calc(var(--grid-unit) * 6);
+		border-radius: calc(var(--grid-unit));
+	}
+
+	.tv-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		gap: calc(var(--grid-unit) * 4);
+		margin-top: calc(var(--grid-unit) * 4);
+	}
+
+	.tv-card {
+		background-color: var(--color-background);
+		padding: calc(var(--grid-unit) * 4);
+		border-radius: calc(var(--grid-unit));
+		border: 2px solid var(--color-border);
+		transition: all 0.3s ease;
+	}
+
+	.tv-card.featured {
+		border-color: var(--color-accent);
+		border-width: 3px;
+	}
+
+	.tv-card h3 {
+		font-size: 1.75rem;
+		margin-bottom: calc(var(--grid-unit));
+		color: var(--color-text-primary);
+	}
+
+	.tv-context {
+		font-family: var(--font-mono);
+		font-size: 0.875rem;
+		color: var(--color-text-muted);
+		margin-bottom: calc(var(--grid-unit) * 2);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.tv-image {
+		margin-top: calc(var(--grid-unit) * 3);
+		border-radius: calc(var(--grid-unit));
+		overflow: hidden;
+	}
+
+	.tv-screenshot {
+		width: 100%;
+		height: auto;
+		display: block;
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+	}
+
+	.tv-image .image-caption {
+		margin-top: calc(var(--grid-unit) * 2);
+		font-size: 0.875rem;
+		color: var(--color-text-muted);
+		font-style: italic;
+		text-align: center;
+		line-height: 1.4;
+	}
+
+	.media-mentions > p {
+		font-size: 1.125rem;
+		line-height: 1.8;
+		margin-bottom: calc(var(--grid-unit) * 4);
+	}
+
+	.media-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: calc(var(--grid-unit) * 4);
+		margin-top: calc(var(--grid-unit) * 4);
+	}
+
+	.media-card {
+		background-color: var(--color-surface);
+		padding: calc(var(--grid-unit) * 4);
+		border-radius: calc(var(--grid-unit));
+		border: 2px solid var(--color-border);
+		transition: all 0.3s ease;
+	}
+
+	.media-card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+		border-color: var(--color-accent);
+	}
+
+	.media-card h3 {
+		font-size: 1.5rem;
+		margin-bottom: calc(var(--grid-unit));
+		color: var(--color-text-primary);
+	}
+
+	.media-context {
+		font-family: var(--font-mono);
+		font-size: 0.875rem;
+		color: var(--color-text-muted);
+		margin-bottom: calc(var(--grid-unit) * 2);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.media-card p:not(.media-context) {
+		margin-bottom: calc(var(--grid-unit) * 2);
+		line-height: 1.6;
+	}
+
+	.media-link {
+		display: inline-block;
+		color: var(--color-accent);
+		font-family: var(--font-heading-secondary);
+		font-weight: 700;
+		font-size: 0.875rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		text-decoration: none;
+		transition: all 0.2s ease;
+	}
+
+	.media-link:hover {
+		text-decoration: underline;
+		transform: translateX(4px);
+	}
+
+	.booking-cta {
+		text-align: center;
+		background-color: var(--color-surface);
+		padding: calc(var(--grid-unit) * 6);
+		border-radius: calc(var(--grid-unit));
+		margin-bottom: calc(var(--grid-unit) * 8);
+	}
+
+	.booking-cta h2 {
+		margin-bottom: calc(var(--grid-unit) * 3);
+	}
+
+	.booking-cta p {
+		font-size: 1.125rem;
+		line-height: 1.6;
+		max-width: 600px;
+		margin: 0 auto calc(var(--grid-unit) * 4) auto;
+	}
+
+	.booking-buttons {
+		display: flex;
+		gap: calc(var(--grid-unit) * 3);
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.booking-btn {
+		font-family: var(--font-heading-secondary);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		padding: calc(var(--grid-unit) * 2) calc(var(--grid-unit) * 4);
+		border-radius: 4px;
+		transition: all 0.2s ease;
+		display: inline-block;
+		text-decoration: none;
+	}
+
+	.booking-btn.primary {
+		background-color: var(--color-accent);
+		color: white;
+		border: 2px solid var(--color-accent);
+	}
+
+	.booking-btn.primary:hover {
+		background-color: var(--color-text-primary);
+		border-color: var(--color-text-primary);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.booking-btn.secondary {
+		background-color: transparent;
+		color: var(--color-text-primary);
+		border: 2px solid var(--color-border);
+	}
+
+	.booking-btn.secondary:hover {
+		border-color: var(--color-accent);
+		color: var(--color-accent);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+	}
+
+	@media (max-width: 768px) {
+		.speaking-header {
+			padding: calc(var(--grid-unit) * 4) 0;
+		}
+
+		.appearances-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.speaking-topics,
+		.booking-cta {
+			padding: calc(var(--grid-unit) * 4) calc(var(--grid-unit) * 2);
+		}
+
+		.topics-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

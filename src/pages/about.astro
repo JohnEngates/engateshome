@@ -3,6 +3,14 @@ import Layout from '../layouts/Layout.astro';
 import { config } from '../config';
 import { Image } from 'astro:assets';
 import headshotImage from '../assets/images/site/engates_john.jpg';
+import rackspaceIPOImage from '../assets/images/site/rackspace-ipo.jpg';
+import nttRoleImage from '../assets/images/site/ntt-role.jpg';
+import cloudflareTeamImage from '../assets/images/site/cloudflare-team.jpg';
+import rackspaceBillboardImage from '../assets/images/site/rackspace-billboard.jpg';
+import rackspaceLeadershipImage from '../assets/images/site/rackspace-leadership-2005.jpg';
+import nyseBannerImage from '../assets/images/site/nyse-rackspace-banner-2008.jpg';
+import openstackSummitImage from '../assets/images/openstack-design-summit.jpg';
+import pioneerShirtImage from '../assets/images/rackspace-pioneer-shirt.jpg';
 ---
 
 <Layout title={`About - ${config.title}`} description="AI Researcher & Technology Innovator with 30+ years of experience">
@@ -43,18 +51,116 @@ import headshotImage from '../assets/images/site/engates_john.jpg';
 					<h3>Field Chief Technology Officer - Cloudflare</h3>
 					<span class="timeline-date">2021 - 2025</span>
 					<p>Leading global Field CTO organization, guiding enterprises through AI and security transformations. Focusing on Zero Trust architectures, SASE solutions, and helping organizations prepare for the post-quantum era.</p>
+					<div class="timeline-image">
+						<a href={cloudflareTeamImage.src} target="_blank" rel="noopener">
+							<Image 
+								src={cloudflareTeamImage} 
+								alt="John Engates with Cloudflare executive team including co-founder Michelle Zatlyn" 
+								class="role-photo clickable"
+								width={800}
+								height={600}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+						<p class="image-caption">With Cloudflare leadership team including co-founder and COO Michelle Zatlyn at partner event</p>
+					</div>
 				</div>
 
 				<div class="timeline-item">
 					<h3>Client Chief Technology Officer - NTT Global Networks</h3>
 					<span class="timeline-date">2018 - 2020</span>
 					<p>Led technology strategy and client engagements for one of the world's largest telecommunications companies, bridging the gap between complex network infrastructure and business value.</p>
+					<div class="timeline-image">
+						<a href={nttRoleImage.src} target="_blank" rel="noopener">
+							<Image 
+								src={nttRoleImage} 
+								alt="John Engates as Client CTO at NTT Global Networks" 
+								class="role-photo clickable"
+								width={800}
+								height={600}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+						<p class="image-caption">Client CTO at NTT Global Networks - Leading enterprise technology transformation</p>
+					</div>
 				</div>
 
 				<div class="timeline-item">
 					<h3>Chief Technology Officer - Rackspace Technology</h3>
 					<span class="timeline-date">2002 - 2018</span>
 					<p>18-year journey from employee #35 to CTO, helping grow the company from startup to over $2 billion in annual revenue. Created the Intensive Hosting division that supported Internet giants including YouTube in its early days. Pioneered "Fanatical Support" culture that became an industry standard. Led the company through IPO and established Rackspace as a leader in managed cloud services.</p>
+					<div class="timeline-image">
+						<a href={rackspaceIPOImage.src} target="_blank" rel="noopener">
+							<Image 
+								src={rackspaceIPOImage} 
+								alt="Rackspace IPO on NYSE - August 8, 2008" 
+								class="ipo-photo clickable"
+								width={800}
+								height={600}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+						<p class="image-caption">Rackspace IPO on the NYSE - August 8, 2008 (08-08-08) - A historic moment as we took the company public</p>
+					</div>
+					<div class="timeline-image">
+						<a href={nyseBannerImage.src} target="_blank" rel="noopener">
+							<Image 
+								src={nyseBannerImage} 
+								alt="NYSE exterior with Rackspace banner on IPO day" 
+								class="role-photo clickable"
+								width={800}
+								height={600}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+						<p class="image-caption">The New York Stock Exchange proudly displaying Rackspace banner on IPO day - August 8, 2008</p>
+					</div>
+					<div class="timeline-image">
+						<a href={rackspaceLeadershipImage.src} target="_blank" rel="noopener">
+							<Image 
+								src={rackspaceLeadershipImage} 
+								alt="Rackspace senior leadership team 2005" 
+								class="role-photo clickable"
+								width={800}
+								height={600}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+						<p class="image-caption">Rackspace senior leadership team circa 2005 - Building the company culture that would define "Fanatical Support"</p>
+					</div>
+					<div class="timeline-image billboard-showcase">
+						<a href={rackspaceBillboardImage.src} target="_blank" rel="noopener">
+							<Image 
+								src={rackspaceBillboardImage} 
+								alt="Rackspace billboard campaign in San Francisco featuring John Engates" 
+								class="role-photo clickable"
+								width={800}
+								height={600}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+						<p class="image-caption">Featured in New Relic's San Francisco billboard campaign as Rackspace partner - "Data helps us deliver DevOps as a service"</p>
+					</div>
+					<div class="timeline-image">
+						<a href={pioneerShirtImage.src} target="_blank" rel="noopener">
+							<Image 
+								src={pioneerShirtImage} 
+								alt="Rackspace pioneer t-shirt from circa 2000" 
+								class="role-photo clickable"
+								width={600}
+								height={800}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+						<p class="image-caption">Original Rackspace "Pioneer" t-shirt circa 2000 - Embodying the startup spirit and pioneering culture of early Rackspace</p>
+					</div>
 				</div>
 
 				<div class="timeline-item">
@@ -65,12 +171,32 @@ import headshotImage from '../assets/images/site/engates_john.jpg';
 			</div>
 
 			<h2>Major Achievements & Contributions</h2>
+			
+			<div class="achievement-highlight">
+				<h3>OpenStack Early Contributor</h3>
+				<p>Part of the early team that helped establish OpenStack as the world's most successful open source cloud computing project. Contributed to the distributed storage system that became OpenStack Swift, now powering some of the world's largest storage platforms.</p>
+				<div class="achievement-image">
+					<a href={openstackSummitImage.src} target="_blank" rel="noopener">
+						<Image 
+							src={openstackSummitImage} 
+							alt="First OpenStack Design Summit in Austin, Texas" 
+							class="achievement-photo clickable"
+							width={800}
+							height={600}
+							format="webp"
+							quality={90}
+						/>
+					</a>
+					<p class="image-caption">First OpenStack Design Summit in Austin, Texas - Where we laid the foundation for open source cloud computing</p>
+				</div>
+				<a href="https://docs.openstack.org/project-team-guide/introduction.html" target="_blank" rel="noopener" class="achievement-link">Learn about OpenStack's history →</a>
+			</div>
+
 			<ul class="achievements-list">
 				<li><strong>Healthcare.gov Crisis Response (2013)</strong> - Called to the White House to help rescue the failing website during a critical national healthcare rollout</li>
 				<li><strong>Congressional Testimony</strong> - Testified before the U.S. House Committee on Oversight and Government Reform on cloud computing's strategic value for government</li>
-				<li><strong>OpenStack Co-founder</strong> - Led creation of the distributed storage system that became OpenStack Swift, now powering some of the world's largest storage platforms</li>
 				<li><strong>Open Compute Project Board Member</strong> - Helped "open source cloud computing hardware" as one of the founding board members, democratizing data center innovation</li>
-				<li><strong>Board Leadership</strong> - Currently serving on boards of Frost Bank (NYSE: CFR) and James Avery Craftsman Jewelry</li>
+				<li><strong>Board Leadership</strong> - Currently serving on boards of <a href="https://www.frostbank.com/leadership/john-engates" target="_blank" rel="noopener">Frost Bank (NYSE: CFR)</a> and James Avery Craftsman Jewelry</li>
 			</ul>
 
 			<h2>Awards & Recognition</h2>
@@ -244,10 +370,43 @@ import headshotImage from '../assets/images/site/engates_john.jpg';
 		margin-bottom: calc(var(--grid-unit) * 2);
 	}
 
-	.timeline-item p {
+	.timeline-item > p {
 		margin: 0;
 		line-height: 1.8;
 		color: var(--color-text-secondary);
+	}
+
+	.timeline-image {
+		margin-top: calc(var(--grid-unit) * 3);
+		border-radius: calc(var(--grid-unit));
+		overflow: hidden;
+	}
+
+	.ipo-photo,
+	.role-photo {
+		width: 100%;
+		height: auto;
+		display: block;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	}
+
+	.clickable {
+		cursor: pointer;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	.clickable:hover {
+		transform: scale(1.02);
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+	}
+
+	.image-caption {
+		margin-top: calc(var(--grid-unit) * 2);
+		font-size: 0.875rem;
+		color: var(--color-text-muted);
+		font-style: italic;
+		text-align: center;
+		line-height: 1.4;
 	}
 
 	.contact-section {
@@ -284,9 +443,65 @@ import headshotImage from '../assets/images/site/engates_john.jpg';
 		text-decoration: none;
 	}
 
+	.achievement-highlight {
+		background-color: var(--color-card-background);
+		border: 1px solid var(--color-border);
+		border-radius: calc(var(--grid-unit));
+		padding: calc(var(--grid-unit) * 4);
+		margin-bottom: calc(var(--grid-unit) * 6);
+	}
+
+	.achievement-highlight h3 {
+		font-size: 1.5rem;
+		margin-bottom: calc(var(--grid-unit) * 2);
+		color: var(--color-accent);
+	}
+
+	.achievement-highlight p {
+		margin-bottom: calc(var(--grid-unit) * 3);
+		line-height: 1.8;
+	}
+
+	.achievement-image {
+		margin-bottom: calc(var(--grid-unit) * 3);
+		border-radius: calc(var(--grid-unit));
+		overflow: hidden;
+	}
+
+	.achievement-photo {
+		width: 100%;
+		height: auto;
+		display: block;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	}
+
+	.achievement-link {
+		display: inline-block;
+		font-family: var(--font-heading-secondary);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-size: 0.875rem;
+		color: var(--color-accent);
+		padding: calc(var(--grid-unit)) calc(var(--grid-unit) * 2);
+		border: 2px solid var(--color-accent);
+		border-radius: 4px;
+		transition: all 0.2s ease;
+	}
+
+	.achievement-link:hover {
+		background-color: var(--color-accent);
+		color: var(--color-background);
+		text-decoration: none;
+	}
+
 	@media (max-width: 768px) {
 		.headshot {
 			max-width: 300px;
+		}
+		
+		.achievement-highlight {
+			padding: calc(var(--grid-unit) * 3);
 		}
 	}
 </style>

@@ -31,6 +31,7 @@ import { config } from '../config';
 						<li>Technology strategy and innovation</li>
 					</ul>
 				</div>
+				<a href="https://www.frostbank.com/leadership/john-engates" target="_blank" rel="noopener" class="board-link">View Board Profile →</a>
 			</article>
 
 			<article class="position-card featured">
@@ -48,6 +49,7 @@ import { config } from '../config';
 						<li>Technology infrastructure modernization</li>
 					</ul>
 				</div>
+				<a href="https://www.jamesavery.com/" target="_blank" rel="noopener" class="board-link">Visit James Avery →</a>
 			</article>
 		</div>
 	</section>
@@ -246,6 +248,24 @@ import { config } from '../config';
 		left: 0;
 		color: var(--color-accent);
 		font-weight: bold;
+	}
+
+	.board-link {
+		display: inline-block;
+		margin-top: calc(var(--grid-unit) * 2);
+		color: var(--color-accent);
+		font-family: var(--font-heading-secondary);
+		font-weight: 700;
+		font-size: 0.875rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		text-decoration: none;
+		transition: all 0.2s ease;
+	}
+
+	.board-link:hover {
+		text-decoration: underline;
+		transform: translateX(4px);
 	}
 
 	.advisory-roles {
