@@ -45,7 +45,7 @@ import { config } from '../config';
 					<h4>Focus Areas:</h4>
 					<ul>
 						<li>E-commerce and omnichannel strategy</li>
-						<li>Digital marketing and customer experience</li>
+						<li>Cybersecurity and risk management</li>
 						<li>Technology infrastructure modernization</li>
 					</ul>
 				</div>
@@ -183,16 +183,17 @@ import { config } from '../config';
 	.company-header {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 		margin-bottom: calc(var(--grid-unit) * 2);
-		flex-wrap: wrap;
-		gap: calc(var(--grid-unit));
+		gap: calc(var(--grid-unit) * 2);
 	}
 
 	.company-header h3 {
 		font-size: 1.75rem;
 		margin: 0;
 		color: var(--color-text-primary);
+		flex: 1;
+		line-height: 1.2;
 	}
 
 	.position-type {
@@ -205,6 +206,8 @@ import { config } from '../config';
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		border-radius: 4px;
+		white-space: nowrap;
+		flex-shrink: 0;
 	}
 
 	.company-info {
@@ -466,8 +469,12 @@ import { config } from '../config';
 		}
 
 		.company-header {
-			flex-direction: column;
-			align-items: flex-start;
+			flex-wrap: wrap;
+		}
+		
+		.company-header h3 {
+			flex-basis: 100%;
+			margin-bottom: calc(var(--grid-unit));
 		}
 	}
 </style>

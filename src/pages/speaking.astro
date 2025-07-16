@@ -19,6 +19,20 @@ import nyseBell1 from '../assets/images/site/nyse-bell-ringing-1.jpg';
 import nyseBell2 from '../assets/images/site/nyse-bell-ringing-2.jpg';
 import techstrongImage from '../assets/images/site/techstrong-tv-2024.jpg';
 import twitImage from '../assets/images/site/twit-enterprise-tech.png';
+import cloudflareImmerseChicago1 from '../assets/images/site/cloudflare-immerse-chicago-1.jpg';
+import cloudflareImmerseChicago2 from '../assets/images/site/cloudflare-immerse-chicago-2.jpg';
+import cloudControlPodcast from '../assets/images/site/cloud-control-podcast.jpg';
+import insideDTPodcast from '../assets/images/site/insidedt-podcast.png';
+import alphalistPodcast from '../assets/images/site/alphalist-podcast.png';
+import congressionalTestimony from '../assets/images/site/congressional-testimony.png';
+import cloudflareIncidentResponse from '../assets/images/site/cloudflare-tv-incident-response.png';
+import cloudTalkPodcast from '../assets/images/site/cloud-talk-podcast.png';
+import ortusClubImage from '../assets/images/site/ortus-club-zero-trust.jpg';
+import cloudflareTvCyberImage from '../assets/images/site/cloudflare-tv-cyber-threats.jpg';
+import indianapolisCisoImage from '../assets/images/site/indianapolis-ciso-townhall.jpg';
+import cloudflarePostQuantumImage from '../assets/images/site/cloudflare-tv-postquantum.png';
+import softwareInBluePodcastImage from '../assets/images/site/software-in-blue-podcast.png';
+import issaConferenceImage from '../assets/images/site/issa-conference.png';
 ---
 
 <Layout title={`Speaking - ${config.title}`} description="Keynote speaker and technology thought leader on AI, cloud computing, and digital transformation">
@@ -37,13 +51,14 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 				src={speakingImage} 
 				alt="John Engates speaking at GigaOM Conference" 
 				class="speaking-photo clickable"
-				width={1200}
-				height={800}
+				width={600}
+				height={400}
 				format="webp"
 				quality={90}
 			/>
 		</a>
-		<p class="photo-caption">Speaking at GigaOM Conference on cloud infrastructure and digital transformation</p>
+		<p class="photo-caption">Speaking at GigaOM Structure 2013 on cloud infrastructure and digital transformation</p>
+		<a href="https://www.youtube.com/watch?v=W5M8yt5gCw0&list=PLCLrzcAZ57SXu-5Gv03Zo4X7YtnQLmri5&index=7" target="_blank" rel="noopener" class="interview-link">Watch Interview →</a>
 	</section>
 
 	<section class="featured-appearances">
@@ -54,10 +69,10 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 		<div class="year-section">
 			<h3 class="year-header">2025</h3>
 			<div class="appearances-grid">
-				<article class="appearance-card highlight special">
+				<article class="appearance-card">
 					<h3>Cloudflare Immerse Houston</h3>
 					<p class="appearance-context">Executive Technology Summit • Houston • 2025</p>
-					<p>Featured speaker at Cloudflare's exclusive executive event in Houston, addressing senior technology leaders on the future of connectivity cloud, AI security, and digital transformation strategies for enterprise organizations.</p>
+					<p>Featured speaker at Cloudflare's exclusive executive event, discussing connectivity cloud, AI security, and digital transformation.</p>
 					<div class="appearance-image">
 						<a href={cloudflareImmerseImage.src} target="_blank">
 							<Image 
@@ -70,9 +85,79 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 								quality={90}
 							/>
 						</a>
-						<p class="image-caption">Speaking at Cloudflare Immerse Houston - Executive technology summit for enterprise leaders</p>
 					</div>
 					<a href="https://immersehouston.splashthat.com/" target="_blank" rel="noopener" class="appearance-link">Event Details →</a>
+				</article>
+				
+				<article class="appearance-card">
+					<h3>Cloudflare Immerse Chicago</h3>
+					<p class="appearance-context">Executive Technology Summit • Chicago • 2025</p>
+					<p>Keynote speaker engaging technology leaders on connectivity cloud evolution and the convergence of AI and edge computing.</p>
+					<div class="appearance-image cloudflare-chicago-photos">
+						<a href={cloudflareImmerseChicago1.src} target="_blank" class="photo-link">
+							<Image 
+								src={cloudflareImmerseChicago1} 
+								alt="John Engates at Cloudflare Immerse Chicago" 
+								class="conference-photo clickable"
+								width={400}
+								height={300}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+						<a href={cloudflareImmerseChicago2.src} target="_blank" class="photo-link">
+							<Image 
+								src={cloudflareImmerseChicago2} 
+								alt="Speaking at Cloudflare Immerse Chicago summit" 
+								class="conference-photo clickable"
+								width={400}
+								height={300}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+					</div>
+					<a href="https://cloudflareimmersechicago.splashthat.com/" target="_blank" rel="noopener" class="appearance-link">Event Details →</a>
+				</article>
+
+				<article class="appearance-card highlight">
+					<h3>Cloudflare TV - Security Week: Post-Quantum Cryptography</h3>
+					<p class="appearance-context">Panel Discussion • Security Week • June 2025</p>
+					<p>Featured panelist with Sharon Goldberg and Bas Westerbaan discussing post-quantum cryptography, quantum threats, and Cloudflare's quantum-safe encryption strategy.</p>
+					<div class="appearance-image">
+						<a href={cloudflarePostQuantumImage.src} target="_blank">
+							<Image 
+								src={cloudflarePostQuantumImage} 
+								alt="Cloudflare TV Security Week Post-Quantum panel" 
+								class="conference-photo clickable"
+								width={800}
+								height={450}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+					</div>
+					<a href="https://cloudflare.tv/shows/security-week/secure-your-future-upgrade-to-post-quantum-cryptography-with-zero-trust/AZEB3Gg6" target="_blank" rel="noopener" class="appearance-link">Watch Episode →</a>
+				</article>
+
+				<article class="appearance-card">
+					<h3>Software in Blue Podcast</h3>
+					<p class="appearance-context">Episode 38 • Cloud & Edge Computing • January 31, 2025</p>
+					<p>In-depth conversation about the evolution of cloud computing, edge infrastructure, and how modern platforms are enabling new possibilities in distributed computing.</p>
+					<div class="appearance-image">
+						<a href={softwareInBluePodcastImage.src} target="_blank">
+							<Image 
+								src={softwareInBluePodcastImage} 
+								alt="Software in Blue Podcast Episode 38" 
+								class="conference-photo clickable"
+								width={800}
+								height={450}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+					</div>
+					<a href="https://www.softwareinblue.com/episode38/" target="_blank" rel="noopener" class="appearance-link">Listen to Episode →</a>
 				</article>
 			</div>
 		</div>
@@ -81,7 +166,7 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 		<div class="year-section">
 			<h3 class="year-header">2024</h3>
 			<div class="appearances-grid">
-				<article class="appearance-card highlight special">
+				<article class="appearance-card">
 					<h3>TechStrong TV</h3>
 					<p class="appearance-context">The Last Great Cloud Transformation: Connectivity Cloud EP1 • September 10, 2024</p>
 					<p>Co-host discussing the connectivity cloud revolution and how network modernization represents the final frontier in cloud computing transformation.</p>
@@ -97,15 +182,14 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 								quality={90}
 							/>
 						</a>
-						<p class="image-caption">Co-hosting TechStrong TV - The Last Great Cloud Transformation: Connectivity Cloud</p>
 					</div>
 					<a href="https://techstrong.tv/videos/the-last-great-cloud-transformation/connectivity-cloud-the-last-great-cloud-transformation-ep1" target="_blank" rel="noopener" class="appearance-link">Watch Episode →</a>
 				</article>
 
-				<article class="appearance-card highlight special">
+				<article class="appearance-card">
 					<h3>LATAM CISO Summit 2024</h3>
 					<p class="appearance-context">Digi Americas • Costa Rica • Panel Moderator</p>
-					<p>Panel moderator for "Enhancing Security through Frameworks: Best Practices in Action" with distinguished panelists from NIST, Televisa Univision, Cybersec Cluster, and Cyber Risk Institute. Engaged with government and industry leaders on cybersecurity frameworks, emerging threats, and digital policy development across the Americas.</p>
+					<p>Panel moderator for "Enhancing Security through Frameworks" with panelists from NIST, Televisa Univision, and Cyber Risk Institute.</p>
 					<div class="appearance-image">
 						<a href={latamPanelImage.src} target="_blank">
 							<Image 
@@ -118,8 +202,27 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 								quality={90}
 							/>
 						</a>
-						<p class="image-caption">Moderating cybersecurity frameworks panel at LATAM CISO Summit 2024 in Costa Rica</p>
 					</div>
+				</article>
+
+				<article class="appearance-card">
+					<h3>Cloudflare TV - This Week in NET</h3>
+					<p class="appearance-context">CTO Perspectives on the Cyber Threat Landscape • September 2024</p>
+					<p>Discussion on Cloudflare's network infrastructure, post-quantum encryption, API protection, and emerging cybersecurity threats.</p>
+					<div class="appearance-image">
+						<a href={cloudflareTvCyberImage.src} target="_blank">
+							<Image 
+								src={cloudflareTvCyberImage} 
+								alt="John Engates on Cloudflare TV discussing cyber threats" 
+								class="conference-photo clickable"
+								width={800}
+								height={600}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+					</div>
+					<a href="https://cloudflare.tv/this-week-in-net/cto-perspectives-on-the-cyber-threat-landscape/8aqKG6gW" target="_blank" rel="noopener" class="appearance-link">Watch Episode →</a>
 				</article>
 			</div>
 		</div>
@@ -131,28 +234,67 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 				<article class="appearance-card">
 					<h3>Cloud Control Podcast</h3>
 					<p class="appearance-context">Building a Better Internet • September 2023</p>
-					<p>Discussed the evolution of internet infrastructure, edge computing, and how modern platforms are enabling developers to build global applications.</p>
+					<p>Discussed internet infrastructure evolution and how modern platforms enable global application development.</p>
+					<div class="appearance-image">
+						<a href={cloudControlPodcast.src} target="_blank">
+							<Image 
+								src={cloudControlPodcast} 
+								alt="John Engates on Cloud Control Podcast" 
+								class="conference-photo clickable"
+								width={800}
+								height={450}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+					</div>
 					<a href="https://open.spotify.com/episode/5dEjCzcn27kiuxOnLr76JE?si=4XyvIhWWSMCynKmlI-L9CQ" target="_blank" rel="noopener" class="appearance-link">Listen on Spotify →</a>
 				</article>
 
 				<article class="appearance-card">
 					<h3>InsideDT Podcast</h3>
 					<p class="appearance-context">Episode 25: AI Impact on Enterprise Cyber Security • August 2023</p>
-					<p>Deep dive into how AI is transforming enterprise IT and cybersecurity, discussing the role of multi-agent systems in the future of technology.</p>
+					<p>Explored AI's impact on enterprise cybersecurity and the role of multi-agent systems.</p>
+					<div class="appearance-image">
+						<a href={insideDTPodcast.src} target="_blank">
+							<Image 
+								src={insideDTPodcast} 
+								alt="John Engates on InsideDT Podcast" 
+								class="conference-photo clickable"
+								width={800}
+								height={450}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+					</div>
 					<a href="https://podcasts.apple.com/be/podcast/s1-e25-cloudflares-john-engates-the-impact-of-ai/id1657857948?i=1000624747816" target="_blank" rel="noopener" class="appearance-link">Listen on Apple Podcasts →</a>
 				</article>
 
 				<article class="appearance-card">
 					<h3>alphalist CTO Podcast</h3>
 					<p class="appearance-context">Episode 75: Field CTO Insights • April 2023</p>
-					<p>Explored the intersection of AI and DevOps, incident response automation, and the evolving role of technology leadership at scale.</p>
+					<p>Discussed AI and DevOps intersection, incident response automation, and technology leadership.</p>
+					<div class="appearance-image">
+						<a href={alphalistPodcast.src} target="_blank">
+							<Image 
+								src={alphalistPodcast} 
+								alt="John Engates on alphalist CTO Podcast" 
+								class="conference-photo clickable"
+								width={800}
+								height={450}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+					</div>
 					<a href="https://alphalist.com/podcast/75-john-engates-field-cto-cloudflare" target="_blank" rel="noopener" class="appearance-link">Listen to Episode →</a>
 				</article>
 
-				<article class="appearance-card highlight special">
+				<article class="appearance-card">
 					<h3>Potsdam Conference for National Cybersecurity</h3>
 					<p class="appearance-context">10th Anniversary Conference • Hasso Plattner Institute, Germany • April 2023</p>
-					<p>International keynote speaker at Germany's premier cybersecurity conference, addressing national security experts, government officials, and industry leaders on global cyber threats and defense strategies.</p>
+					<p>International keynote at Germany's premier cybersecurity conference on global cyber threats and defense strategies.</p>
 					<div class="appearance-image">
 						<a href={potsdamSpeakingImage.src} target="_blank">
 							<Image 
@@ -173,7 +315,7 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 				<article class="appearance-card">
 					<h3>This Week in Enterprise Tech</h3>
 					<p class="appearance-context">Episode 530: The Death of 'The Password' • February 2023</p>
-					<p>Featured guest discussing passwordless authentication options, ransomware recovery strategies, and the future of enterprise security with Cloudflare's Zero Trust solutions.</p>
+					<p>Featured guest discussing passwordless authentication, ransomware recovery, and Zero Trust solutions.</p>
 					<div class="appearance-image">
 						<a href={twitImage.src} target="_blank">
 							<Image 
@@ -190,6 +332,26 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 					</div>
 					<a href="https://twit.tv/shows/this-week-in-enterprise-tech/episodes/530" target="_blank" rel="noopener" class="appearance-link">Watch Episode →</a>
 				</article>
+
+				<article class="appearance-card">
+					<h3>Indianapolis CISO Town Hall</h3>
+					<p class="appearance-context">Cybersecurity Meets Business Strategy • Evanta/Gartner • May 2023</p>
+					<p>Virtual presentation on "Unlocking Value and Igniting Growth" through strategic cybersecurity initiatives. Addressed regional CISOs on aligning security programs with business objectives and driving organizational transformation.</p>
+					<div class="appearance-image">
+						<a href={indianapolisCisoImage.src} target="_blank">
+							<Image 
+								src={indianapolisCisoImage} 
+								alt="John Engates presenting at Indianapolis CISO Town Hall" 
+								class="conference-photo clickable"
+								width={800}
+								height={600}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+					</div>
+					<a href="https://www.evanta.com/ciso/indianapolis/indianapolis-ciso-town-hall-6680" target="_blank" rel="noopener" class="appearance-link">Event Details →</a>
+				</article>
 			</div>
 		</div>
 
@@ -197,10 +359,23 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 		<div class="year-section">
 			<h3 class="year-header">2022</h3>
 			<div class="appearances-grid">
-				<article class="appearance-card highlight">
+				<article class="appearance-card">
 					<h3>Cloudflare TV - Incident Response Series</h3>
 					<p class="appearance-context">Behind the Scenes: Log4j Response • May 2022</p>
 					<p>With CTO John Graham-Cumming, detailed examination of how Cloudflare responds to critical vulnerabilities. Deep dive into the Log4j incident response, demonstrating real-world security leadership during major threats.</p>
+					<div class="appearance-image">
+						<a href={cloudflareIncidentResponse.src} target="_blank">
+							<Image 
+								src={cloudflareIncidentResponse} 
+								alt="John Engates on Cloudflare TV Incident Response Series" 
+								class="conference-photo clickable"
+								width={800}
+								height={600}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+					</div>
 					<a href="https://cloudflare.tv/event/behind-the-scenes-incident-response-at-cloudflare/PZ5GzMv2" target="_blank" rel="noopener" class="appearance-link">Watch Episode →</a>
 				</article>
 
@@ -208,7 +383,60 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 					<h3>Cloud Talk</h3>
 					<p class="appearance-context">Zero Trust Everywhere • February 2022</p>
 					<p>Explored the implementation of Zero Trust architectures and how organizations can secure their infrastructure in a perimeter-less world.</p>
+					<div class="appearance-image">
+						<a href={cloudTalkPodcast.src} target="_blank">
+							<Image 
+								src={cloudTalkPodcast} 
+								alt="John Engates on Cloud Talk podcast" 
+								class="conference-photo clickable"
+								width={800}
+								height={600}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+					</div>
 					<a href="https://www.rackspace.com/solve/zero-trust-everywhere" target="_blank" rel="noopener" class="appearance-link">Listen to Episode →</a>
+				</article>
+
+				<article class="appearance-card">
+					<h3>ISSA International Conference</h3>
+					<p class="appearance-context">Keynote Speaker • Security Leadership • March 16, 2022</p>
+					<p>Featured speaker at the Information Systems Security Association conference, discussing the convergence of AI and cybersecurity, and how organizations can prepare for emerging threats.</p>
+					<div class="appearance-image">
+						<a href={issaConferenceImage.src} target="_blank">
+							<Image 
+								src={issaConferenceImage} 
+								alt="ISSA International Conference" 
+								class="conference-photo clickable"
+								width={800}
+								height={600}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+					</div>
+					<a href="https://issa.org/event/secure-your-future-internet-native-architecture-helps-you-transform-your-business-faster/" target="_blank" rel="noopener" class="appearance-link">View Event →</a>
+				</article>
+
+				<article class="appearance-card">
+					<h3>Ortus Club Zero Trust Panel</h3>
+					<p class="appearance-context">Zero Trust, Zero Nonsense • Executive Summit • October 2022</p>
+					<p>Presenter on "The Network for Digital Transformation" and panel moderator for the closing executive discussion. Led conversations on practical Zero Trust implementation, ransomware mitigation, and improving IT visibility with senior technology leaders.</p>
+					<div class="appearance-image">
+						<a href={ortusClubImage.src} target="_blank">
+							<Image 
+								src={ortusClubImage} 
+								alt="John Engates at Ortus Club Zero Trust Summit" 
+								class="conference-photo clickable"
+								width={800}
+								height={600}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+					</div>
+					<a href="https://www.ortusclub.com/dczero-trust-session/" target="_blank" rel="noopener" class="appearance-link">Event Details →</a>
 				</article>
 			</div>
 		</div>
@@ -247,10 +475,24 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 					</div>
 				</article>
 
-				<article class="appearance-card highlight">
+				<article class="appearance-card highlight special">
 					<h3>Congressional Testimony</h3>
 					<p class="appearance-context">"The State of the Cloud" • September 22, 2015 • UTSA</p>
 					<p>Testified before the House Committee on Oversight and Government Reform alongside leaders from AWS, VMware, and DHS. Addressed the critical need for cloud adoption in federal IT, where only 2% of major agency budgets were allocated to cloud computing despite $80 billion in annual IT spending.</p>
+					<div class="appearance-image">
+						<a href={congressionalTestimony.src} target="_blank">
+							<Image 
+								src={congressionalTestimony} 
+								alt="John Engates testifying before Congress" 
+								class="conference-photo clickable"
+								width={800}
+								height={600}
+								format="webp"
+								quality={90}
+							/>
+						</a>
+						<p class="image-caption">Testifying before the House Committee on Oversight and Government Reform on cloud computing strategy</p>
+					</div>
 					<a href="https://oversight.house.gov/hearing/oversight-it-subcommittee-committee-to-examine-cloud-solutions/" target="_blank" rel="noopener" class="appearance-link">View Hearing Details →</a>
 				</article>
 			</div>
@@ -260,7 +502,7 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 		<div class="year-section">
 			<h3 class="year-header">2013</h3>
 			<div class="appearances-grid">
-				<article class="appearance-card highlight special">
+				<article class="appearance-card">
 					<h3>FutureStack13 - New Relic's Inaugural Conference</h3>
 					<p class="appearance-context">Grand Hyatt San Francisco • October 24-25, 2013</p>
 					<p>Keynote speaker at New Relic's first FutureStack conference, sharing the stage with Steve Wozniak, co-founder of Apple. As Rackspace CTO, delivered insights on the future of application performance monitoring, the evolving DevOps landscape, and how modern infrastructure enables continuous innovation.</p>
@@ -297,7 +539,7 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 					<a href="https://newrelic.com/de/press-releases/20130716" target="_blank" rel="noopener" class="appearance-link">View Press Release →</a>
 				</article>
 
-				<article class="appearance-card highlight">
+				<article class="appearance-card highlight special">
 					<h3>White House Technology Advisory</h3>
 					<p class="appearance-context">Healthcare.gov Rescue Mission • November 25, 2013</p>
 					<p>Invited to the White House Situation Room alongside tech industry leaders to validate the "tech surge" strategy for fixing Healthcare.gov. Visited the operations center at QSSI, met with point person Jeffrey Zients, and advised on centralizing contractors, implementing automation, and optimizing database performance. Part of an effort to broaden government IT procurement beyond traditional contractors.</p>
@@ -359,7 +601,7 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 		<div class="year-section">
 			<h3 class="year-header">Healthcare.gov Media Coverage</h3>
 			<div class="appearances-grid">
-				<article class="appearance-card highlight special">
+				<article class="appearance-card special">
 					<h3>National Media Coverage</h3>
 					<p class="appearance-context">Healthcare.gov Crisis Response • 2013</p>
 					<p>As one of the technology experts brought in to help fix Healthcare.gov, I became a prominent voice in national media during this critical period in U.S. healthcare policy. From live television interviews to in-depth print analysis, I provided expert commentary to over a dozen major news outlets on the technical challenges, recovery strategies, and the broader implications for government technology modernization. My insights on cloud infrastructure, system architecture, and the need for fundamental IT procurement reform helped shape public understanding of both the crisis and its solutions.</p>
@@ -412,7 +654,7 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 		<div class="year-section">
 			<h3 class="year-header">2012</h3>
 			<div class="appearances-grid">
-				<article class="appearance-card highlight special">
+				<article class="appearance-card">
 					<h3>LSI Accelerating Innovation Summit (AIS) 2012</h3>
 					<p class="appearance-context">San Jose, California • November 13, 2012</p>
 					<p>Main speaker at LSI's fifth annual summit, presenting on "Rethinking Future Storage Strategies" to industry leaders grappling with the data explosion. Addressed how the industry should reshape storage architectures in the era of cloud computing, drawing on experience building OpenStack Swift and scaling Rackspace's infrastructure to support the world's largest digital properties.</p>
@@ -439,7 +681,7 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 		<div class="year-section">
 			<h3 class="year-header">Earlier Career Highlights</h3>
 			<div class="appearances-grid">
-				<article class="appearance-card highlight special">
+				<article class="appearance-card">
 					<h3>Cloudflare's First Customer Conference</h3>
 					<p class="appearance-context">Historic Speaking Engagement • Internet Summit</p>
 					<p>Invited as a featured speaker at Cloudflare's inaugural customer conference while serving as CTO at Rackspace. Shared the stage with industry luminaries including Sir Tim Berners-Lee, inventor of the World Wide Web, and Cloudflare co-founder Michelle Zatlyn.</p>
@@ -459,19 +701,7 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 					</div>
 				</article>
 
-				<article class="appearance-card">
-					<h3>ISSA International Conference</h3>
-					<p class="appearance-context">Keynote Speaker • Security Leadership</p>
-					<p>Featured speaker at the Information Systems Security Association conference, discussing the convergence of AI and cybersecurity, and how organizations can prepare for emerging threats.</p>
-					<a href="https://issa.org/speaker/john-engates" target="_blank" rel="noopener" class="appearance-link">View Profile →</a>
-				</article>
 
-				<article class="appearance-card">
-					<h3>Software in Blue Podcast</h3>
-					<p class="appearance-context">Episode 38 • Cloud & Edge Computing</p>
-					<p>In-depth conversation about the evolution of cloud computing, edge infrastructure, and how modern platforms are enabling new possibilities in distributed computing.</p>
-					<a href="https://www.softwareinblue.com/episode38/" target="_blank" rel="noopener" class="appearance-link">Listen to Episode →</a>
-				</article>
 
 				<article class="appearance-card">
 					<h3>YouTube Video Appearance</h3>
@@ -480,12 +710,6 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 					<a href="https://www.youtube.com/watch?v=MkWQZx7OOhQ" target="_blank" rel="noopener" class="appearance-link">Watch Video →</a>
 				</article>
 
-				<article class="appearance-card">
-					<h3>Evanta CISO Town Hall</h3>
-					<p class="appearance-context">Indianapolis • Executive Security Summit</p>
-					<p>Featured speaker at exclusive CISO gathering, discussing Zero Trust architectures and the evolving role of security leadership.</p>
-					<a href="https://www.evanta.com/ciso/indianapolis/indianapolis-ciso-town-hall-6680" target="_blank" rel="noopener" class="appearance-link">Event Details →</a>
-				</article>
 			</div>
 		</div>
 		
@@ -511,31 +735,6 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 				<h3>Digital Transformation</h3>
 				<p>Practical insights from guiding Fortune 500 companies through technology transformations, from legacy modernization to AI adoption.</p>
 			</div>
-		</div>
-	</section>
-
-	<section class="media-press">
-		<h2>Media & Press</h2>
-		<p class="section-intro">Featured insights and thought leadership across major technology publications.</p>
-		<div class="press-grid">
-			<article class="press-card">
-				<h3>The Last Frontier of Cloud Transformation</h3>
-				<p class="press-context">Wall Street Journal Partner Content • 2023</p>
-				<p>Exploring how connectivity cloud represents the final evolution in enterprise cloud adoption, moving beyond compute and storage to network transformation.</p>
-				<a href="https://partners.wsj.com/cloudflare/the-need-for-a-new-kind-of-cloud/the-last-frontier-of-cloud-transformation/" target="_blank" rel="noopener" class="press-link">Read Article →</a>
-			</article>
-			<article class="press-card">
-				<h3>5 Strategies for CIO Success in 2023</h3>
-				<p class="press-context">The Enterprisers Project • January 2023</p>
-				<p>Key strategies for technology leaders navigating digital transformation, including embracing AI, focusing on security, and building resilient architectures.</p>
-				<a href="https://enterprisersproject.com/article/2023/1/5-strategies-cio-success-2023" target="_blank" rel="noopener" class="press-link">Read Article →</a>
-			</article>
-			<article class="press-card">
-				<h3>The Rise of Chief Zero Trust Officer</h3>
-				<p class="press-context">Intelligent CIO North America • January 2023</p>
-				<p>Why organizations are creating dedicated Zero Trust leadership roles and how this reflects the evolution of enterprise security strategy.</p>
-				<a href="https://www.intelligentcio.com/north-america/2023/01/03/the-rise-of-chief-zero-trust-officer/" target="_blank" rel="noopener" class="press-link">Read Article →</a>
-			</article>
 		</div>
 	</section>
 
@@ -589,6 +788,20 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 		font-size: 0.875rem;
 		color: var(--color-text-muted);
 		font-style: italic;
+	}
+
+	.interview-link {
+		display: inline-block;
+		margin-top: calc(var(--grid-unit));
+		font-size: 0.875rem;
+		color: var(--color-accent);
+		text-decoration: none;
+		font-weight: 600;
+		transition: all 0.3s ease;
+	}
+
+	.interview-link:hover {
+		transform: translateX(5px);
 	}
 
 	.featured-appearances {
@@ -764,6 +977,13 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 		gap: calc(var(--grid-unit) * 2);
 		margin: calc(var(--grid-unit) * 3) 0;
 	}
+	
+	.cloudflare-chicago-photos {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: calc(var(--grid-unit) * 2);
+		margin: calc(var(--grid-unit) * 3) 0;
+	}
 
 	.nyse-photo {
 		width: 100%;
@@ -848,61 +1068,6 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 	.topic-card p {
 		line-height: 1.8;
 		color: var(--color-text-secondary);
-	}
-
-	.media-press {
-		margin-bottom: calc(var(--grid-unit) * 8);
-		background-color: var(--color-surface);
-		padding: calc(var(--grid-unit) * 6);
-		border-radius: calc(var(--grid-unit));
-		border: 2px solid var(--color-border);
-	}
-
-	.press-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: calc(var(--grid-unit) * 4);
-		margin-top: calc(var(--grid-unit) * 4);
-	}
-
-	.press-card h3 {
-		margin-bottom: calc(var(--grid-unit));
-		color: var(--color-text-primary);
-		font-size: 1.125rem;
-	}
-
-	.press-context {
-		font-family: var(--font-heading-secondary);
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		font-size: 0.75rem;
-		color: var(--color-accent);
-		margin-bottom: calc(var(--grid-unit) * 2);
-	}
-
-	.press-card p {
-		line-height: 1.8;
-		color: var(--color-text-secondary);
-		margin-bottom: calc(var(--grid-unit) * 2);
-		font-size: 0.875rem;
-	}
-
-	.press-link {
-		display: inline-block;
-		font-family: var(--font-heading-secondary);
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		font-size: 0.75rem;
-		color: var(--color-accent);
-		transition: all 0.2s ease;
-	}
-
-	.press-link:hover {
-		color: var(--color-text-primary);
-		text-decoration: none;
-		transform: translateX(4px);
 	}
 
 	.speaking-booking {
@@ -1019,6 +1184,10 @@ import twitImage from '../assets/images/site/twit-enterprise-tech.png';
 		}
 
 		.nyse-bell-photos {
+			grid-template-columns: 1fr;
+		}
+		
+		.cloudflare-chicago-photos {
 			grid-template-columns: 1fr;
 		}
 

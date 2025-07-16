@@ -300,9 +300,47 @@
   // Initialize clickable images
   function initializeLightbox() {
     // First, handle specific multi-image containers
-    const multiImageContainers = document.querySelectorAll('.whitehouse-photos, .nyse-bell-photos, .wozniak-photos, .achievement-photos');
+    const multiImageContainers = document.querySelectorAll('.whitehouse-photos, .nyse-bell-photos, .wozniak-photos, .achievement-photos, .cloudflare-chicago-photos');
+    
+    // Special handling for White House photos that are in separate containers
+    const whitehouseArticle = document.querySelector('article:has(.whitehouse-photos)');
+    if (whitehouseArticle) {
+      const allWhitehouseImages = whitehouseArticle.querySelectorAll('.clickable');
+      if (allWhitehouseImages.length > 1) {
+        const gallery = Array.from(allWhitehouseImages).map(img => {
+          // For the side view image, look for caption after the image container
+          const container = img.closest('.whitehouse-hero-photo');
+          let caption = img.alt;
+          if (container) {
+            const nextElement = container.nextElementSibling;
+            if (nextElement && nextElement.classList.contains('image-caption')) {
+              caption = nextElement.textContent;
+            }
+          }
+          return {
+            src: img.src,
+            alt: img.alt,
+            caption: caption
+          };
+        });
+        
+        allWhitehouseImages.forEach((img, index) => {
+          const link = img.closest('a');
+          if (link) {
+            link.setAttribute('data-lightbox-initialized', 'true');
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              openLightbox(img.src, img.alt, gallery[index].caption, gallery, index);
+            });
+          }
+        });
+      }
+    }
     
     multiImageContainers.forEach(container => {
+      // Skip whitehouse-photos as it's handled specially above
+      if (container.classList.contains('whitehouse-photos')) return;
+      
       const images = container.querySelectorAll('.clickable');
       if (images.length > 1) {
         const gallery = Array.from(images).map(img => {

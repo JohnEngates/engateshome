@@ -1,0 +1,313 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { config } from '../config';
+import { Image } from 'astro:assets';
+import postQuantumBlogImage from '../assets/images/site/cloudflare-blog-post-quantum.png';
+import cioInfluenceImage from '../assets/images/site/cio-influence-interview.jpg';
+---
+
+<Layout title={`Media - ${config.title}`} description="Featured insights and thought leadership across major technology publications">
+	<section class="media-header">
+		<h1>Media & Press</h1>
+		<p class="subtitle">Thought leadership on AI, cybersecurity, and cloud transformation</p>
+	</section>
+
+	<section class="media-intro">
+		<p>Featured insights and perspectives shared across leading technology publications, from deep technical analysis to strategic guidance for enterprise transformation.</p>
+	</section>
+
+	<section class="media-content">
+		<div class="press-grid">
+			<article class="press-card highlight">
+				<h3>The Stakes and Stages of Post-Quantum Zero Trust</h3>
+				<p class="press-context">Cloudflare Blog • 2024</p>
+				<p>Deep dive into preparing enterprise security architectures for the post-quantum era, exploring how Zero Trust principles must evolve to address quantum computing threats.</p>
+				<div class="press-image">
+					<a href={postQuantumBlogImage.src} target="_blank">
+						<Image 
+							src={postQuantumBlogImage} 
+							alt="Post-Quantum Zero Trust article on Cloudflare Blog" 
+							class="press-photo clickable"
+							width={600}
+							height={400}
+							format="webp"
+							quality={90}
+						/>
+					</a>
+				</div>
+				<a href="https://blog.cloudflare.com/post-quantum-zero-trust/" target="_blank" rel="noopener" class="press-link">Read Article →</a>
+			</article>
+			<article class="press-card highlight">
+				<h3>Five Great (free!) Ways to Get Started With Cloudflare</h3>
+				<p class="press-context">Cloudflare Blog • November 2021</p>
+				<p>Comprehensive beginner's guide to leveraging Cloudflare's free services, covering domain registration, DNS management, website hosting with Pages, network security with Zero Trust, and personal internet protection with 1.1.1.1 and WARP.</p>
+				<a href="https://blog.cloudflare.com/five-free-ways-to-get-started-with-cloudflare/" target="_blank" rel="noopener" class="press-link">Read Article →</a>
+			</article>
+			<article class="press-card">
+				<h3>The Last Frontier of Cloud Transformation</h3>
+				<p class="press-context">Wall Street Journal Partner Content • 2023</p>
+				<p>Exploring how connectivity cloud represents the final evolution in enterprise cloud adoption, moving beyond compute and storage to network transformation.</p>
+				<a href="https://partners.wsj.com/cloudflare/the-need-for-a-new-kind-of-cloud/the-last-frontier-of-cloud-transformation/" target="_blank" rel="noopener" class="press-link">Read Article →</a>
+			</article>
+			<article class="press-card">
+				<h3>5 Strategies for CIO Success in 2023</h3>
+				<p class="press-context">The Enterprisers Project • January 2023</p>
+				<p>Key strategies for technology leaders navigating digital transformation, including embracing AI, focusing on security, and building resilient architectures.</p>
+				<a href="https://enterprisersproject.com/article/2023/1/5-strategies-cio-success-2023" target="_blank" rel="noopener" class="press-link">Read Article →</a>
+			</article>
+			<article class="press-card">
+				<h3>The Rise of Chief Zero Trust Officer</h3>
+				<p class="press-context">Intelligent CIO North America • January 2023</p>
+				<p>Why organizations are creating dedicated Zero Trust leadership roles and how this reflects the evolution of enterprise security strategy.</p>
+				<a href="https://www.intelligentcio.com/north-america/2023/01/03/the-rise-of-chief-zero-trust-officer/" target="_blank" rel="noopener" class="press-link">Read Article →</a>
+			</article>
+			
+			<article class="press-card">
+				<h3>The Internet is at Risk Without Proper Control Over Web Scraping</h3>
+				<p class="press-context">The Hindu • December 2024</p>
+				<p>Discussing critical threats to internet infrastructure from uncontrolled web scraping and bot traffic, and how proper security measures can protect digital resources while enabling legitimate automation.</p>
+				<a href="https://www.thehindu.com/sci-tech/technology/the-internet-is-at-risk-without-proper-control-over-web-scraping-cloudflare-top-exec/article68917366.ece" target="_blank" rel="noopener" class="press-link">Read Article →</a>
+			</article>
+			
+			<article class="press-card">
+				<h3>Why Your Cloud Security Strategy May Be Obsolete by 2025</h3>
+				<p class="press-context">Tahawul Tech • 2024</p>
+				<p>Analysis of emerging threats and architectural shifts that are rendering traditional cloud security approaches inadequate, with recommendations for modernizing security strategies.</p>
+				<a href="https://www.tahawultech.com/features/why-your-cloud-security-strategy-may-be-obsolete-by-2025-and-what-to-do-about-it/" target="_blank" rel="noopener" class="press-link">Read Article →</a>
+			</article>
+			
+			<article class="press-card">
+				<h3>APIs: Understanding the Business Benefits and Risks</h3>
+				<p class="press-context">MIT Sloan Management Review • Sponsor Content</p>
+				<p>Exploring how APIs drive digital transformation while examining security considerations and best practices for enterprise API strategies in the modern connectivity landscape.</p>
+				<a href="https://sloanreview.mit.edu/sponsors-content/apis-understanding-the-business-benefits-and-risks/" target="_blank" rel="noopener" class="press-link">Read Article →</a>
+			</article>
+			
+			<article class="press-card">
+				<h3>Smartphone security's dirty little secret</h3>
+				<p class="press-context">BBC • 2012</p>
+				<p>Insights on mobile security vulnerabilities and how organizations need to adapt their security strategies for the smartphone era.</p>
+				<a href="https://www.bbc.com/news/business-17222816" target="_blank" rel="noopener" class="press-link">Read Article →</a>
+			</article>
+			
+			<article class="press-card highlight">
+				<h3>Field CTO Perspectives on Zero Trust and Cloud Security</h3>
+				<p class="press-context">CIO Influence • June 2023</p>
+				<p>In-depth interview covering the evolution of Zero Trust security, DDoS attack mitigation strategies, Shadow IT challenges, and the role of AI in modern cybersecurity. Discusses Cloudflare's mission to build a better internet through innovative security solutions.</p>
+				<div class="press-image">
+					<a href={cioInfluenceImage.src} target="_blank">
+						<Image 
+							src={cioInfluenceImage} 
+							alt="John Engates CIO Influence interview" 
+							class="press-photo clickable"
+							width={600}
+							height={400}
+							format="webp"
+							quality={90}
+						/>
+					</a>
+				</div>
+				<a href="https://cioinfluence.com/cloud/cio-influence-interview-with-john-engates-field-chief-technology-officer-at-cloudflare/" target="_blank" rel="noopener" class="press-link">Read Interview →</a>
+			</article>
+		</div>
+	</section>
+
+	<section class="media-contact">
+		<h2>Media Inquiries</h2>
+		<p>For press inquiries, interviews, or speaking opportunities, please get in touch.</p>
+		<a href={`mailto:${config.social.email}?subject=Media%20Inquiry`} class="contact-btn">Contact Me</a>
+	</section>
+</Layout>
+
+<style>
+	.media-header {
+		text-align: center;
+		padding: calc(var(--grid-unit) * 6) 0;
+		border-bottom: 4px solid var(--color-accent);
+		margin-bottom: calc(var(--grid-unit) * 6);
+	}
+
+	.subtitle {
+		font-size: 1.25rem;
+		color: var(--color-text-secondary);
+		font-weight: 500;
+		letter-spacing: 0.05em;
+		margin: 0;
+	}
+
+	.media-intro {
+		max-width: 800px;
+		margin: 0 auto calc(var(--grid-unit) * 6);
+		text-align: center;
+		font-size: 1.125rem;
+		line-height: 1.8;
+		color: var(--color-text-secondary);
+	}
+
+	.media-content {
+		margin-bottom: calc(var(--grid-unit) * 8);
+	}
+
+	.press-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: calc(var(--grid-unit) * 4);
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.press-card {
+		padding: calc(var(--grid-unit) * 4);
+		background-color: var(--color-surface);
+		border: 2px solid var(--color-border);
+		border-radius: calc(var(--grid-unit));
+		transition: all 0.3s ease;
+	}
+
+	.press-card:hover {
+		border-color: var(--color-accent);
+		transform: translateY(-4px);
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+	}
+
+	.press-card.highlight {
+		border-color: var(--color-accent);
+		position: relative;
+		padding-top: calc(var(--grid-unit) * 6);
+	}
+
+	.press-card.highlight::before {
+		content: "FEATURED";
+		position: absolute;
+		top: calc(var(--grid-unit) * 3);
+		left: calc(var(--grid-unit) * 4);
+		font-family: var(--font-heading-secondary);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font-size: 0.625rem;
+		color: var(--color-accent);
+		background-color: var(--color-bg);
+		padding: calc(var(--grid-unit) / 2) calc(var(--grid-unit));
+		border: 1px solid var(--color-accent);
+		border-radius: calc(var(--grid-unit) / 2);
+	}
+
+	.press-image {
+		margin: calc(var(--grid-unit) * 3) 0;
+		border-radius: calc(var(--grid-unit) / 2);
+		overflow: hidden;
+	}
+
+	.press-photo {
+		width: 100%;
+		height: auto;
+		display: block;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	}
+
+	.clickable {
+		cursor: pointer;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	.clickable:hover {
+		transform: scale(1.02);
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+	}
+
+	.press-card h3 {
+		margin-bottom: calc(var(--grid-unit) * 2);
+		color: var(--color-text-primary);
+		font-size: 1.25rem;
+		line-height: 1.4;
+	}
+
+	.press-context {
+		font-family: var(--font-heading-secondary);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-size: 0.75rem;
+		color: var(--color-accent);
+		margin-bottom: calc(var(--grid-unit) * 2);
+	}
+
+	.press-card p {
+		line-height: 1.8;
+		color: var(--color-text-secondary);
+		margin-bottom: calc(var(--grid-unit) * 3);
+	}
+
+	.press-link {
+		display: inline-block;
+		font-family: var(--font-heading-secondary);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-size: 0.875rem;
+		color: var(--color-accent);
+		transition: all 0.2s ease;
+	}
+
+	.press-link:hover {
+		color: var(--color-text-primary);
+		text-decoration: none;
+		transform: translateX(4px);
+	}
+
+	.media-contact {
+		text-align: center;
+		padding: calc(var(--grid-unit) * 8);
+		background-color: var(--color-surface);
+		border-radius: calc(var(--grid-unit));
+		border: 2px solid var(--color-accent);
+		margin-bottom: calc(var(--grid-unit) * 6);
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.media-contact h2 {
+		margin-bottom: calc(var(--grid-unit) * 3);
+		color: var(--color-accent);
+	}
+
+	.media-contact p {
+		font-size: 1.125rem;
+		line-height: 1.8;
+		color: var(--color-text-secondary);
+		margin-bottom: calc(var(--grid-unit) * 4);
+	}
+
+	.contact-btn {
+		display: inline-block;
+		padding: calc(var(--grid-unit) * 2) calc(var(--grid-unit) * 4);
+		background-color: var(--color-accent);
+		color: white;
+		font-family: var(--font-heading-secondary);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		border-radius: 4px;
+		transition: all 0.3s ease;
+	}
+
+	.contact-btn:hover {
+		background-color: var(--color-text-primary);
+		text-decoration: none;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	}
+
+	@media (max-width: 768px) {
+		.press-grid {
+			grid-template-columns: 1fr;
+			gap: calc(var(--grid-unit) * 3);
+		}
+
+		.media-contact {
+			padding: calc(var(--grid-unit) * 4);
+		}
+	}
+</style>
