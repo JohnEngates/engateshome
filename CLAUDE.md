@@ -129,3 +129,14 @@ Co-Authored-By: Claude <noreply@anthropic.com>
 - `/deploy` - Builds and deploys to Cloudflare Workers (runs `npm run deploy`)
 - Always verify changes locally before deploying
 - Check deployment status at https://engateshome.jengates.workers.dev
+
+## Documentation
+
+Project-specific documentation for third-party tools and libraries is stored in the `/documentation` folder (git-ignored). This includes:
+
+- **Framework Documentation**: Astro core concepts, Cloudflare Workers essentials, Wrangler CLI
+- **Integration Documentation**: Astro-Cloudflare adapter, MDX integration, RSS feeds
+- **Theme Documentation**: Volks-Typo theme implementation and customization
+- **Reference Guides**: Content collections, Cloudflare bindings, deployment procedures
+
+This documentation is maintained separately from the codebase to provide Claude Code with quick access to relevant information without searching external sources.
