@@ -164,11 +164,13 @@ import { config } from '../config';
 	}
 
 	.position-card {
+		position: relative;
 		background-color: var(--color-surface);
 		padding: calc(var(--grid-unit) * 4);
 		border-radius: calc(var(--grid-unit));
 		border: 2px solid var(--color-border);
 		transition: all 0.3s ease;
+		cursor: pointer;
 	}
 
 	.position-card.featured {
@@ -268,7 +270,17 @@ import { config } from '../config';
 
 	.board-link:hover {
 		text-decoration: underline;
-		transform: translateX(4px);
+	}
+
+	/* Stretched link - makes entire card clickable */
+	.board-link::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
 	}
 
 	.advisory-roles {

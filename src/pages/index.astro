@@ -57,6 +57,21 @@ import profileImage from '../assets/images/site/engates1x1.png';
 		</div>
 	</section>
 
+	<section class="company-logos">
+		<h2>Executive Leadership</h2>
+		<p class="logos-subtitle">CTO roles at companies that shaped the modern internet</p>
+		<div class="logos-grid">
+			<a href="https://www.rackspace.com" target="_blank" rel="noopener noreferrer" class="company-logo" aria-label="Rackspace">
+				<span class="logo-text rackspace">rackspace</span>
+				<span class="role-title">Co-Founder & CTO</span>
+			</a>
+			<a href="https://www.cloudflare.com" target="_blank" rel="noopener noreferrer" class="company-logo" aria-label="Cloudflare">
+				<span class="logo-text cloudflare">Cloudflare</span>
+				<span class="role-title">Field CTO</span>
+			</a>
+		</div>
+	</section>
+
 	<section class="security-quote">
 		<blockquote>
 			<p>"I've always believed that security isn't an add-on - it's the foundation for scalable AI. As AI agents take on more mission-critical workflows across the enterprise...we must all raise standards for security and data protection, while continuing to advance the frontier of enterprise-grade AI."</p>
@@ -90,15 +105,6 @@ import profileImage from '../assets/images/site/engates1x1.png';
 		</div>
 	</section>
 
-	<footer class="built-with">
-		<p>
-			<a href="https://www.anthropic.com/claude-code" target="_blank" rel="noopener noreferrer"><i class="fas fa-robot"></i> Claude Code</a>
-			<span class="separator">|</span>
-			<a href="https://astro.build/" target="_blank" rel="noopener noreferrer"><i class="fas fa-rocket"></i> Astro</a>
-			<span class="separator">|</span>
-			<a href="https://workers.cloudflare.com/" target="_blank" rel="noopener noreferrer"><i class="fas fa-cloud"></i> Cloudflare Workers</a>
-		</p>
-	</footer>
 </Layout>
 
 <style>
@@ -168,13 +174,19 @@ import profileImage from '../assets/images/site/engates1x1.png';
 		background-color: var(--color-background);
 		border: 2px solid var(--color-border);
 		border-radius: calc(var(--grid-unit));
-		transition: all 0.3s ease;
+		transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+		            box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+		            border-color 0.3s ease;
 	}
 
 	.research-item:hover {
 		border-color: var(--color-accent);
-		transform: translateY(-4px);
-		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+		transform: translateY(-6px);
+		box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+	}
+
+	[data-theme="dark"] .research-item:hover {
+		box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 	}
 
 	.research-item h3 {
@@ -186,6 +198,88 @@ import profileImage from '../assets/images/site/engates1x1.png';
 		font-size: 1rem;
 		line-height: 1.6;
 		color: var(--color-text-secondary);
+	}
+
+	.company-logos {
+		text-align: center;
+		padding: calc(var(--grid-unit) * 6) 0;
+		margin: calc(var(--grid-unit) * 4) 0;
+	}
+
+	.logos-subtitle {
+		font-size: 1.125rem;
+		color: var(--color-text-secondary);
+		margin-bottom: calc(var(--grid-unit) * 5);
+	}
+
+	.logos-grid {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: calc(var(--grid-unit) * 8);
+		flex-wrap: wrap;
+	}
+
+	.company-logo {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: calc(var(--grid-unit) * 1.5);
+		text-decoration: none;
+		padding: calc(var(--grid-unit) * 3);
+		border-radius: calc(var(--grid-unit));
+		transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+		            opacity 0.3s ease;
+		opacity: 0.6;
+		filter: grayscale(100%);
+	}
+
+	.company-logo:hover {
+		opacity: 1;
+		filter: grayscale(0%);
+		transform: translateY(-4px);
+		text-decoration: none;
+	}
+
+	.logo-text {
+		font-family: var(--font-heading-primary);
+		font-size: 2.5rem;
+		font-weight: 700;
+		letter-spacing: 0.02em;
+		color: var(--color-text-primary);
+		transition: color 0.3s ease;
+	}
+
+	.logo-text.rackspace {
+		text-transform: lowercase;
+		letter-spacing: 0.05em;
+	}
+
+	.company-logo:hover .logo-text.rackspace {
+		color: #c8102e;
+	}
+
+	.company-logo:hover .logo-text.cloudflare {
+		color: #f38020;
+	}
+
+	.role-title {
+		font-family: var(--font-heading-secondary);
+		font-size: 0.875rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: var(--color-text-muted);
+	}
+
+	@media (max-width: 768px) {
+		.logos-grid {
+			gap: calc(var(--grid-unit) * 4);
+		}
+
+		.logo-text {
+			font-size: 2rem;
+		}
 	}
 
 	.experience {
@@ -214,7 +308,11 @@ import profileImage from '../assets/images/site/engates1x1.png';
 		letter-spacing: 0.05em;
 		padding: calc(var(--grid-unit) * 2) calc(var(--grid-unit) * 4);
 		border-radius: 4px;
-		transition: all 0.2s ease;
+		transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+		            box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+		            background-color 0.2s ease,
+		            border-color 0.2s ease,
+		            color 0.2s ease;
 		display: inline-block;
 	}
 
@@ -327,43 +425,6 @@ import profileImage from '../assets/images/site/engates1x1.png';
 		text-decoration: none;
 		transform: translateY(-2px);
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	}
-
-	.built-with {
-		text-align: center;
-		padding: calc(var(--grid-unit) * 2) 0 calc(var(--grid-unit) * 3) 0;
-		background-color: var(--color-surface);
-		margin-top: -1px; /* Remove gap from border */
-		font-size: 0.7rem;
-	}
-
-	.built-with p {
-		margin: 0;
-		color: var(--color-text-secondary);
-	}
-
-	.built-with a {
-		color: var(--color-text-secondary);
-		text-decoration: none;
-		transition: color 0.2s ease;
-		font-weight: 500;
-		display: inline-flex;
-		align-items: center;
-		gap: 0.3rem;
-	}
-
-	.built-with i {
-		font-size: 0.85rem;
-	}
-
-	.built-with a:hover {
-		color: var(--color-accent);
-	}
-
-	.built-with .separator {
-		margin: 0 calc(var(--grid-unit));
-		color: var(--color-border);
-		opacity: 0.5;
 	}
 
 	@media (max-width: 768px) {

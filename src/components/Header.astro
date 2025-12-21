@@ -1,6 +1,15 @@
 ---
 import { config } from '../config';
 import ThemeToggle from './ThemeToggle.astro';
+
+const currentPath = Astro.url.pathname;
+
+function isActive(href: string): boolean {
+  if (href === '/') {
+    return currentPath === '/';
+  }
+  return currentPath.startsWith(href);
+}
 ---
 
 <header class="site-header">
@@ -23,13 +32,13 @@ import ThemeToggle from './ThemeToggle.astro';
     <div class="header-controls">
       <nav class="main-navigation" role="navigation" aria-label="Main navigation">
         <ul class="nav-list">
-          <li><a href="/" class="nav-link">Home</a></li>
-          <li><a href="/about" class="nav-link">About</a></li>
-          <li><a href="/speaking" class="nav-link">Speaking</a></li>
-          <li><a href="/media" class="nav-link">Media</a></li>
-          <li><a href="/advisory" class="nav-link">Advisory</a></li>
-          <li><a href="/projects" class="nav-link">Projects</a></li>
-          <li><a href="/blog" class="nav-link">Blog</a></li>
+          <li><a href="/" class={`nav-link ${isActive('/') ? 'active' : ''}`}>Home</a></li>
+          <li><a href="/about" class={`nav-link ${isActive('/about') ? 'active' : ''}`}>About</a></li>
+          <li><a href="/speaking" class={`nav-link ${isActive('/speaking') ? 'active' : ''}`}>Speaking</a></li>
+          <li><a href="/media" class={`nav-link ${isActive('/media') ? 'active' : ''}`}>Media</a></li>
+          <li><a href="/advisory" class={`nav-link ${isActive('/advisory') ? 'active' : ''}`}>Advisory</a></li>
+          <li><a href="/projects" class={`nav-link ${isActive('/projects') ? 'active' : ''}`}>Projects</a></li>
+          <li><a href="/blog" class={`nav-link ${isActive('/blog') ? 'active' : ''}`}>Blog</a></li>
         </ul>
       </nav>
       
@@ -43,17 +52,34 @@ import ThemeToggle from './ThemeToggle.astro';
 
 <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
   <ul class="mobile-nav-list">
-    <li><a href="/" class="mobile-nav-link">Home</a></li>
-    <li><a href="/about" class="mobile-nav-link">About</a></li>
-    <li><a href="/speaking" class="mobile-nav-link">Speaking</a></li>
-    <li><a href="/media" class="mobile-nav-link">Media</a></li>
-    <li><a href="/advisory" class="mobile-nav-link">Advisory</a></li>
-    <li><a href="/projects" class="mobile-nav-link">Projects</a></li>
-    <li><a href="/blog" class="mobile-nav-link">Blog</a></li>
+    <li><a href="/" class={`mobile-nav-link ${isActive('/') ? 'active' : ''}`}>Home</a></li>
+    <li><a href="/about" class={`mobile-nav-link ${isActive('/about') ? 'active' : ''}`}>About</a></li>
+    <li><a href="/speaking" class={`mobile-nav-link ${isActive('/speaking') ? 'active' : ''}`}>Speaking</a></li>
+    <li><a href="/media" class={`mobile-nav-link ${isActive('/media') ? 'active' : ''}`}>Media</a></li>
+    <li><a href="/advisory" class={`mobile-nav-link ${isActive('/advisory') ? 'active' : ''}`}>Advisory</a></li>
+    <li><a href="/projects" class={`mobile-nav-link ${isActive('/projects') ? 'active' : ''}`}>Projects</a></li>
+    <li><a href="/blog" class={`mobile-nav-link ${isActive('/blog') ? 'active' : ''}`}>Blog</a></li>
   </ul>
 </nav>
 
 <script>
+  // Header scroll shadow
+  function initScrollShadow() {
+    const header = document.querySelector('.site-header');
+    if (!header) return;
+
+    function updateHeaderShadow() {
+      if (window.scrollY > 0) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+
+    window.addEventListener('scroll', updateHeaderShadow, { passive: true });
+    updateHeaderShadow(); // Initial check
+  }
+
   // Hamburger menu functionality
   function initHamburgerMenu() {
     const hamburgerToggle = document.getElementById('hamburger-toggle');
@@ -97,10 +123,15 @@ import ThemeToggle from './ThemeToggle.astro';
   }
 
   // Initialize when DOM is loaded
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initHamburgerMenu);
-  } else {
+  function init() {
     initHamburgerMenu();
+    initScrollShadow();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
   }
 </script>
 
@@ -112,6 +143,15 @@ import ThemeToggle from './ThemeToggle.astro';
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .site-header.scrolled {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  [data-theme="dark"] .site-header.scrolled {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   }
 
   .header-content {
@@ -174,6 +214,11 @@ import ThemeToggle from './ThemeToggle.astro';
     color: var(--color-accent);
     border-bottom-color: var(--color-accent);
     text-decoration: none;
+  }
+
+  .nav-link.active {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
   }
 
   /* Desktop controls - visible by default */
@@ -249,6 +294,12 @@ import ThemeToggle from './ThemeToggle.astro';
   .mobile-nav-link:focus {
     color: var(--color-accent);
     background-color: var(--color-surface);
+  }
+
+  .mobile-nav-link.active {
+    color: var(--color-accent);
+    background-color: var(--color-surface);
+    border-left: 4px solid var(--color-accent);
   }
 
   @media (max-width: 768px) {

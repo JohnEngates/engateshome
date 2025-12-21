@@ -157,11 +157,13 @@ import cioInfluenceImage from '../assets/images/site/cio-influence-interview.jpg
 	}
 
 	.press-card {
+		position: relative;
 		padding: calc(var(--grid-unit) * 4);
 		background-color: var(--color-surface);
 		border: 2px solid var(--color-border);
 		border-radius: calc(var(--grid-unit));
 		transition: all 0.3s ease;
+		cursor: pointer;
 	}
 
 	.press-card:hover {
@@ -250,10 +252,26 @@ import cioInfluenceImage from '../assets/images/site/cio-influence-interview.jpg
 		transition: all 0.2s ease;
 	}
 
+	/* Stretched link - makes entire card clickable */
+	.press-link::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+	}
+
 	.press-link:hover {
 		color: var(--color-text-primary);
 		text-decoration: none;
-		transform: translateX(4px);
+	}
+
+	/* Keep images clickable above the stretched link */
+	.press-image {
+		position: relative;
+		z-index: 2;
 	}
 
 	.media-contact {

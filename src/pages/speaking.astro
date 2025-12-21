@@ -838,11 +838,13 @@ import issaConferenceImage from '../assets/images/site/issa-conference.png';
 	}
 
 	.appearance-card {
+		position: relative;
 		background-color: var(--color-surface);
 		padding: calc(var(--grid-unit) * 4);
 		border-radius: calc(var(--grid-unit));
 		border: 2px solid var(--color-border);
 		transition: all 0.3s ease;
+		cursor: pointer;
 	}
 
 	.appearance-card.highlight {
@@ -906,10 +908,23 @@ import issaConferenceImage from '../assets/images/site/issa-conference.png';
 	.appearance-link:hover {
 		color: var(--color-text-primary);
 		text-decoration: none;
-		transform: translateX(4px);
 	}
 
+	/* Stretched link - makes entire card clickable */
+	.appearance-link::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+	}
+
+	/* Keep images clickable above the stretched link */
 	.appearance-image {
+		position: relative;
+		z-index: 2;
 		margin: calc(var(--grid-unit) * 3) 0;
 		border-radius: calc(var(--grid-unit));
 		overflow: hidden;
